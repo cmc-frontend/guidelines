@@ -195,6 +195,7 @@ It's important to recognize the difference between ["support" and "optimization"
 -----------
 
 **Reference**:   
+http://bradfrost.com/blog/post/frontend-guidelines-exercise/  
 http://www.yellowshoe.com.au/standards  
 http://codeguide.co/  
 http://manuals.gravitydept.com/code  
