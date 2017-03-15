@@ -4,7 +4,7 @@ Frontend guidelines to make team members write consistent & cohesive code togeth
 ## HTML
 ### HTML Principles
 - **Standalone**  
-HTML itself should work well without CSS and JavaScript. The content should be accessible, form should be able to submited.  
+HTML itself should work without CSS and JavaScript. The content should be accessible, form should be able to submited.  
 Disable images, CSS and JavaScript to check if it works.  
 
 - **Semantics**  
