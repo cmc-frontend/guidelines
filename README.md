@@ -54,11 +54,6 @@ Use comments in backend/templating language:
 <p>Lorem ipsum dolor sit amet.</p>
 ```
 
-**Reference**:   
-http://www.yellowshoe.com.au/standards/#html  
-http://codeguide.co/#html  
-http://manuals.gravitydept.com/code/html  
-
 ### HTML Tools  
 **templating engine**   
 Nunjucks: [website](https://mozilla.github.io/nunjucks/), [templating](https://mozilla.github.io/nunjucks/templating.html), [API](https://mozilla.github.io/nunjucks/api.html)  
@@ -189,3 +184,8 @@ It's important to recognize the difference between ["support" and "optimization"
 - **What happens when the guidelines are updated?**
 
 -----------
+
+**Reference**:   
+http://www.yellowshoe.com.au/standards  
+http://codeguide.co/  
+http://manuals.gravitydept.com/code  
