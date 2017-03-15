@@ -81,11 +81,11 @@ Use 2 spaces for indentation. This is the only way to guarantee code renders the
 
 - **Attributes**  
 HTML attributes should come in this order for easier reading:  
-1. `class`   
-2. `id, name`   
-3. `data-*`  
-4. `src, for, type, href, value`  
-5. `title, alt`, `role, aria-*`   
+  1. `class`   
+  2. `id, name`   
+  3. `data-*`  
+  4. `src, for, type, href, value`  
+  5. `title, alt`, `role, aria-*`   
 
 Classes are used most often, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.
 ```html
