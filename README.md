@@ -198,3 +198,4 @@ It's important to recognize the difference between ["support" and "optimization"
 http://www.yellowshoe.com.au/standards  
 http://codeguide.co/  
 http://manuals.gravitydept.com/code  
+https://github.com/bendc/frontend-guidelines/blob/master/README.md  
