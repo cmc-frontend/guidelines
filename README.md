@@ -37,6 +37,22 @@ The classes used for javaScript must start with `js-`.
 ```html
 <a href="" class="js-popup">Log In</a>
 ```
+**Comments**  
+Don't use HTML comments, because:
+- HTML comments should be visible only for developer.
+- HTML comments increase file size.
+
+Use comments in backend/templating language:
+```php
+<?php
+// Some comments
+?>
+<p>Lorem ipsum dolor sit amet.</p>
+```
+```njk
+{# Some comments #}
+<p>Lorem ipsum dolor sit amet.</p>
+```
 
 **Reference**:   
 http://www.yellowshoe.com.au/standards/#html  
