@@ -3,8 +3,21 @@ Frontend guidelines to make team members write consistent & cohesive code togeth
 
 ## HTML
 ### HTML Principles
-- **What are some general principles your team should follow when writing HTML?** *(for example, authoring semantic HTML5 markup, accessibility, etc. See [these](http://www.yellowshoe.com.au/standards/#html) [resources](http://codeguide.co/#html) for [inspiration](http://manuals.gravitydept.com/code/html))*
+**Some general principles the team should follow when writing HTML**  
+- Use soft tabs with **two spaces** — they're the only way to guarantee code renders the same in any environment.
+- HTML attributes should come in this particular order for easier reading of code: `class`, `id | name`, `data-*`, `src | for | type | href | value`, `title | alt`, `role | aria-*`. Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks), so they come second.
+```html
+<a class="link" id="link" data-toggle="modal" href="#">Example link</a>
+```
+- The classes only for javaScript must start with `js-`.
+```html
+<a href="" class="link-login js-popup">Log In</a>
+```
 
+**Reference**:   
+http://www.yellowshoe.com.au/standards/#html
+http://codeguide.co/#html
+http://manuals.gravitydept.com/code/html
 
 ### HTML Tools
 - We use templating engine - **Nunjucks**: [website](https://mozilla.github.io/nunjucks/), [templating](https://mozilla.github.io/nunjucks/templating.html), [API](https://mozilla.github.io/nunjucks/api.html)  
