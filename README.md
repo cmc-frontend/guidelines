@@ -93,14 +93,7 @@ Classes are used most often, so they come first. Ids are more specific and shoul
 ```
 
 - **Classes**  
-  - Always use lower case.
-```html
-<!-- Bad -->
-<p class="myMessage">Contents.</p>
-
-<!-- Good -->
-<p class="my-message">Contents.</p>
-```
+  - Always use lower case.  
   - The classes used for javaScript must start with `js-`.
 ```html
 <a href="" class="js-popup">Log In</a>
