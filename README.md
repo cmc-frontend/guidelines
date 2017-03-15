@@ -4,7 +4,8 @@ Frontend guidelines to make team members write consistent & cohesive code togeth
 ## HTML
 ### HTML Principles
 - **Standalone**  
-HTML itself should be meaningful without CSS and javaScript.  
+HTML itself should work well without CSS and JavaScript. The content should be accessible, form should be able to submited.  
+Disable images, CSS and JavaScript to check if it works.  
 
 - **Semantics**  
 Use semantics elements (`<article>`, `<aside>`, `<figure>`, `<figcaption>`, `<header>`, `<footer>`, `<main>`, `<nav>`, `<section>`) instead of generic elements (`<div>`, `<span>`).   
@@ -71,6 +72,7 @@ https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_
 https://bitsofco.de/document-outlines-in-html-5-1/  
 https://gsnedders.html5.org/outliner/  
 
+- Avoid **inline styles** or **event handlers**  
 - **Indentation**  
 Use 2 spaces for indentation. This is the only way to guarantee code renders the same in any environment.
 ```html
