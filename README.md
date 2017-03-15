@@ -3,14 +3,14 @@ Frontend guidelines to make team members write consistent & cohesive code togeth
 
 ## HTML
 ### HTML Principles
-**Standalone**  
+- **Standalone**  
 HTML itself should be meaningful without CSS and javaScript.  
 
-**Semantics**  
+- **Semantics**  
 Use semantics elements (`<article>`, `<aside>`, `<figure>`, `<figcaption>`, `<header>`, `<footer>`, `<main>`, `<nav>`, `<section>`) instead of generic elements (`<div>`, `<span>`).   
 http://html5bot.webflow.io/  
 
-**Document outline**  
+- **Document outline**  
 Traditional way
 ```html
 <div class="primary">
@@ -71,7 +71,7 @@ https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_
 https://bitsofco.de/document-outlines-in-html-5-1/  
 https://gsnedders.html5.org/outliner/  
 
-**Indentation**  
+- **Indentation**  
 Use 2 spaces for indentation. This is the only way to guarantee code renders the same in any environment.
 ```html
 <ul>
@@ -79,7 +79,7 @@ Use 2 spaces for indentation. This is the only way to guarantee code renders the
 </ul>
 ```
 
-**Attributes**  
+- **Attributes**  
 HTML attributes should come in this order for easier reading:  
 1. `class`   
 2. `id, name`   
@@ -92,12 +92,12 @@ Classes are used most often, so they come first. Ids are more specific and shoul
 <a class="link" id="link" data-toggle="modal" href="#">Example link</a>
 ```
 
-**Classes**  
+- **Classes**  
 The classes used for javaScript must start with `js-`.
 ```html
 <a href="" class="js-popup">Log In</a>
 ```
-**Comments**  
+- **Comments**  
 Don't use HTML comments, because:
 - HTML comments should be visible only for developer.
 - HTML comments increase file size.
@@ -115,7 +115,7 @@ Use comments in backend/templating language:
 ```
 
 ### HTML Tools  
-**templating engine**   
+- **templating engine**   
 Nunjucks: [website](https://mozilla.github.io/nunjucks/), [templating](https://mozilla.github.io/nunjucks/templating.html), [API](https://mozilla.github.io/nunjucks/api.html)  
 
 ---------------
