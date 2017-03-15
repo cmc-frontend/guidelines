@@ -9,7 +9,67 @@ HTML itself should be meaningful without CSS and javaScript.
 **Semantics**  
 Use semantics elements (`<article>`, `<aside>`, `<figure>`, `<figcaption>`, `<header>`, `<footer>`, `<main>`, `<nav>`, `<section>`) instead of generic elements (`<div>`, `<span>`).   
 http://html5bot.webflow.io/  
+
+**Document outline**  
+Traditional way
+```html
+<div class="primary">
+    <h1>Page Title</h1>
+
+    <div class="article">
+        <h2>Article Title</h2>
+        <p>Llorem ipsum dolor sit amet.</p>
+
+        <h3>Article Subtitle</h3>
+        <p>Curabitur vulputate, ligula lacinia scelerisque tempor.</p>
+
+        <h3>Article Subtitle</h3>
+        <p>Curabitur vulputate, ligula lacinia scelerisque tempor.</p>
+    </div>
+
+    <div class="article">
+        <h2>Article Title</h2>
+        <p>Nulla facilisi. Duis aliquet egestas purus in blandit.</p>
+    </div>
+</div>
+
+<div class="sidebar">
+    <h2>Related Articles</h2>
+    ...
+</div>
+```
+HTML5
+```html
+<div class="primary">
+    <h1>Page Title</h1>
+
+    <article>
+        <h1>Article Title</h1>
+        <p>Llorem ipsum dolor sit amet.</p>
+
+        <h2>Article Subtitle</h2>
+        <p>Curabitur vulputate, ligula lacinia scelerisque tempor.</p>
+
+        <h2>Article Subtitle</h2>
+        <p>Curabitur vulputate, ligula lacinia scelerisque tempor.</p>
+    </article>
+
+    <article>
+        <h1>Article Title</h1>
+        <p>Nulla facilisi. Duis aliquet egestas purus in blandit.</p>
+    </article>
+</div>
+
+<aside>
+    <h1>Related Articles</h1>
+    ...
+</aside>
+```
+https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm/  
+http://html5doctor.com/outlines/  
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines  
 https://bitsofco.de/document-outlines-in-html-5-1/  
+https://gsnedders.html5.org/outliner/  
 
 **Indentation**  
 Use 2 spaces for indentation. This is the only way to guarantee code renders the same in any environment.
