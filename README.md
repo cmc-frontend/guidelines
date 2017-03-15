@@ -3,9 +3,14 @@ Frontend guidelines to make team members write consistent & cohesive code togeth
 
 ## HTML
 ### HTML Principles
-**General principles**  
-- Use soft tabs with **two spaces** — they're the only way to guarantee code renders the same in any environment.
-- HTML attributes should come in this particular order for easier reading of code: `class`, `id, name`, `data-*`, `src, for, type, href, value`, `title, alt`, `role, aria-*`. Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks), so they come second.
+- Use soft tabs with **2 spaces** — they're the only way to guarantee code renders the same in any environment.
+- HTML attributes should come in this order for easier reading:  
+	`class`, 
+	`id, name`, 
+	`data-*`, 
+	`src, for, type, href, value`, 
+	`title, alt`, `role, aria-*`.  
+	Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.
 ```html
 <a class="link" id="link" data-toggle="modal" href="#">Example link</a>
 ```
@@ -15,24 +20,12 @@ Frontend guidelines to make team members write consistent & cohesive code togeth
 ```
 
 **Reference**:   
-http://www.yellowshoe.com.au/standards/#html
-http://codeguide.co/#html
-http://manuals.gravitydept.com/code/html
+http://www.yellowshoe.com.au/standards/#html  
+http://codeguide.co/#html  
+http://manuals.gravitydept.com/code/html  
 
 ### HTML Tools
 - We use templating engine - **Nunjucks**: [website](https://mozilla.github.io/nunjucks/), [templating](https://mozilla.github.io/nunjucks/templating.html), [API](https://mozilla.github.io/nunjucks/api.html)  
-
-### HTML Style  
-- **Indent**: Space, 2
-- The **HTML commenting** should looks like:  
-```html
-<!-- header start -->
-<header class="site-header">
-  <div class="logo"><a href="/">Logo</a></div>
-</header>
-<!-- header end -->
-```
-
 ---------------
 
 ## CSS 
