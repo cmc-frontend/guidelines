@@ -44,7 +44,8 @@ http://codeguide.co/#html
 http://manuals.gravitydept.com/code/html  
 
 ### HTML Tools
-- We use templating engine - **Nunjucks**: [website](https://mozilla.github.io/nunjucks/), [templating](https://mozilla.github.io/nunjucks/templating.html), [API](https://mozilla.github.io/nunjucks/api.html)  
+**templating engine**  
+Nunjucks: [website](https://mozilla.github.io/nunjucks/), [templating](https://mozilla.github.io/nunjucks/templating.html), [API](https://mozilla.github.io/nunjucks/api.html)  
 ---------------
 
 ## CSS 
