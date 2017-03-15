@@ -99,8 +99,8 @@ The classes used for javaScript must start with `js-`.
 ```
 - **Comments**  
 Don't use HTML comments, because:
-- HTML comments should be visible only for developer.
-- HTML comments increase file size.
+  - HTML comments should be visible only for developer.
+  - HTML comments increase file size.
 
 Use comments in backend/templating language:
 ```php
