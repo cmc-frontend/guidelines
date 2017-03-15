@@ -3,18 +3,20 @@ Frontend guidelines to make team members write consistent & cohesive code togeth
 
 ## HTML
 ### HTML Principles
-- Use soft tabs with **2 spaces** — they're the only way to guarantee code renders the same in any environment.
+- HTML itself should be meaningful without CSS and javaScript.
+- Use **semantics** tags instead of no particular meaning tags: `<div>`s or `<span>`s. [Resource1](http://html5bot.webflow.io/), [Resource2](https://bitsofco.de/document-outlines-in-html-5-1/).
+- Use **2 spaces** for indentation — the only way to guarantee code renders the same in any environment.
 - HTML attributes should come in this order for easier reading:  
 	`class`,   
 	`id, name`,   
 	`data-*`,  
 	`src, for, type, href, value`,  
 	`title, alt`, `role, aria-*`   
-	Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.
+	Classes are used most often, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.
 ```html
 <a class="link" id="link" data-toggle="modal" href="#">Example link</a>
 ```
-- The classes only for javaScript must start with `js-`.
+- The classe used for javaScript must start with `js-`.
 ```html
 <a href="" class="link-login js-popup">Log In</a>
 ```
