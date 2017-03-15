@@ -16,6 +16,7 @@ https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algori
 http://html5doctor.com/outlines/  
 https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines  
 https://bitsofco.de/document-outlines-in-html-5-1/  
+https://css-tricks.com/document-outline-dilemma/  
 https://gsnedders.html5.org/outliner/  
 
 - Avoid **inline styles** or **event handlers**  
