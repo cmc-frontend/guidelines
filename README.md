@@ -101,7 +101,7 @@ Classes are used most often, so they come first. Ids are more specific and shoul
 - **Comments**  
 Don't use HTML comments, because:
   - HTML comments should be visible only for developer.
-  - HTML comments increase file size.
+  - HTML comments increase file size.  
 
 Use comments in backend/templating language:
 ```php
