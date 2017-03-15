@@ -3,9 +3,9 @@ Frontend guidelines to make team members write consistent & cohesive code togeth
 
 ## HTML
 ### HTML Principles
-**Some general principles the team should follow when writing HTML**  
+**General principles**  
 - Use soft tabs with **two spaces** — they're the only way to guarantee code renders the same in any environment.
-- HTML attributes should come in this particular order for easier reading of code: `class`, `id | name`, `data-*`, `src | for | type | href | value`, `title | alt`, `role | aria-*`. Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks), so they come second.
+- HTML attributes should come in this particular order for easier reading of code: `class`, `id, name`, `data-*`, `src, for, type, href, value`, `title, alt`, `role, aria-*`. Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks), so they come second.
 ```html
 <a class="link" id="link" data-toggle="modal" href="#">Example link</a>
 ```
