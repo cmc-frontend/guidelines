@@ -5,11 +5,11 @@ Frontend guidelines to make team members write consistent & cohesive code togeth
 ### HTML Principles
 - Use soft tabs with **2 spaces** — they're the only way to guarantee code renders the same in any environment.
 - HTML attributes should come in this order for easier reading:  
-	`class`, 
-	`id, name`, 
-	`data-*`, 
-	`src, for, type, href, value`, 
-	`title, alt`, `role, aria-*`.  
+	`class`,   
+	`id, name`,   
+	`data-*`,  
+	`src, for, type, href, value`,  
+	`title, alt`, `role, aria-*`   
 	Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.
 ```html
 <a class="link" id="link" data-toggle="modal" href="#">Example link</a>
