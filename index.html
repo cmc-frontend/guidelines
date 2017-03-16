@@ -1,33 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Frontend Guidelines</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <style>
-    body { margin: 0; }
-    main { max-width: 960px; margin: 0 auto; }
-  </style>
-</head>
-<body>
-  <main>
-    <article>
-      <h1>Frontend Guidelines</h1>
-      <p>Frontend guidelines to make team members write consistent & cohesive code together.</p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Frontend Guidelines
+    </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100, 300,400,700">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <style>
+    body { margin: 0; font-family: 'Lato', sans-serif;}
+    </style>
+    <link rel="stylesheet" href="assets/css/guidelines.css">
+    <script src="assets/js/prefixfree.js" async defer>
+    </script>
+    <script src="assets/js/prism.js" async defer>
+    </script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>
+          Frontend Guidelines
+        </h1>
+        <p>
+          Frontend guidelines to make team members write consistent &amp; cohesive code together.
+        </p>
+      </header>
       <section>
-        <h2>HTML</h2>
+        <h2>
+          HTML
+        </h2>
         <section>
-          <h3>HTML Principles</h3>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </section>        
+          <h3>
+            HTML Principles
+          </h3>
+          <section>
+            <h4>
+              Standalone
+            </h4>
+            <p>
+              HTML itself should work without CSS and JavaScript. The content should be accessible, form should be able to submited.
+            </p>
+            <p>
+              Disable images, CSS and JavaScript to check if it works.
+            </p>
+          </section>
+          <section>
+            <h4>
+              Semantics
+            </h4>
+            <p>
+              Use semantics elements (<code class="language-html">article</code>, <code class="language-html">aside</code>, <code class="language-html">figure</code>, <code class="language-html">figcaption</code>, <code class="language-html">header</code>, <code class="language-html">footer</code>, <code class="language-html">main</code>, <code class="language-html">nav</code>, <code class="language-html">section</code>) instead of generic elements (<code class="language-html">div</code>, <code class="language-html">span</code>).
+            </p>
+            <p>
+              Don't know which element to use, <a href="http://html5bot.webflow.io/" target="_blank">click here</a>.
+            </p>
+          </section>
+          <section>
+            <h4>
+              Document outline
+            </h4>
+            <p>
+              <a href="https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm/" target="_blank">html5 and the document outlining algorithm/</a>
+            </p>
+            <p>
+              <a href="http://html5doctor.com/outlines/" target="_blank">html5 outlines</a>
+            </p>
+            <p>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">Using HTML sections and outlines</a>
+            </p>
+            <p>
+              <a href="https://bitsofco.de/document-outlines-in-html-5-1/" target="_blank">document outlines in html5.1/</a>
+            </p>
+            <p>
+              <a href="https://css-tricks.com/document-outline-dilemma/" target="_blank">document outline dilemma</a>
+            </p>
+            <p>
+              <a href="https://gsnedders.html5.org/outliner/" target="_blank">outliner</a>
+            </p>
+          </section>
+          <section>
+            <h4>
+              Inline styles
+            </h4>
+            <p>
+              Avoid inline styles or event handlers
+            </p>
+          </section>
+          <section>
+            <h4>
+              Indentation
+            </h4>
+            <p>
+              Use 2 spaces for indentation. This is the only way to guarantee code renders the same in any environment.
+            </p>
+            <pre>
+<code class="language-markup" id="">&lt;ul&gt;
+..&lt;li&gt;Item&lt;/li&gt;
+..&lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;</code>
+</pre>
+          </section>
+          <section>
+            <h4>
+              Attributes
+            </h4>
+            <p>
+              HTML attributes should come in this order for easier reading:<br>
+              <code class="language-html">class</code><br>
+              <code class="language-html">id, name</code><br>
+              <code class="language-html">data-*</code><br>
+              <code class="language-html">src, for, type, href, value</code><br>
+              <code class="language-html">title, alt, role, aria-*</code>
+            </p>
+            <p>
+              Classes are used most often, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.
+            </p>
+            <pre>
+<code class="language-markup" id="">&lt;a class="link" id="link" data-toggle="modal" href="#"&gt;Example link&lt;/a&gt;</code>
+</pre>
+          </section>
+          <section>
+            <h4>
+              Classes
+            </h4>
+            <p>
+              + Always use lower case.
+            </p>
+            <p>
+              + The classes used for javaScript must start with <code class="language-html">js-</code>.
+            </p>
+            <pre>
+<code class="language-markup" id="">&lt;a href="" class="js-popup"&gt;Log In&lt;/a&gt;</code>
+</pre>
+          </section>
+          <section>
+            <h4>
+              Comments
+            </h4>
+            <p>
+              Don't use HTML comments, because:
+            </p>
+            <p>
+              + HTML comments should be visible only for developer.
+            </p>
+            <p>
+              + HTML comments increase file size.
+            </p>
+            <p>
+              Use comments in backend/templating language:
+            </p>
+            <pre>
+<code class="language-markup" id="">&lt;?php
+// Some comments
+?&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;</code>
+</pre>
+            <pre>
+<code class="language-markup" id="">{# Some comments #}
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;</code>
+</pre>
+          </section>
+        </section>
+        <section>
+          <h3>
+            HTML Tools
+          </h3>
+          <section>
+            <h4>
+              Templating engine
+            </h4>
+            <p>
+              Nunjucks: <a href="https://mozilla.github.io/nunjucks" target="_blank">website</a>, <a href="https://mozilla.github.io/nunjucks/templating.html" target="_blank">templating</a>, <a href="https://mozilla.github.io/nunjucks/api.html" target="_blank">API</a>
+            </p>
+          </section>
+        </section>
       </section>
-    </article>
-  </main>
-</body>
+      <section>
+        <h2>
+          CSS
+        </h2>
+        <section>
+          <h3>
+            CSS Principles
+          </h3>
+        </section>
+        <section>
+          <h3>
+            CSS Methodology
+          </h3>
+        </section>
+        <section>
+          <h3>
+            CSS Tools
+          </h3>
+          <section>
+            <h4>
+              Preprocessor
+            </h4>
+            <p>
+              SASS: <a href='http://sass-lang.com' target="_blank">website</a>, <a href="https://sass-guidelin.es" target="_blank">SASS Guidelines</a>
+            </p>
+          </section>
+          <section>
+            <h4>
+              CSS Base
+            </h4>
+            <p>
+              Normalize: <a href="https://necolas.github.io/normalize.css/" target="_blank">website</a>
+            </p>
+            <p>
+              Reset: <a href='https://github.com/ganlanyuan/startpoint/blob/master/src/scss/base/_reset.scss' target="_blank">link</a>
+            </p>
+          </section>
+          <section>
+            <h4>
+              Postprocessors
+            </h4>
+            <p>
+              <a href="https://leaverou.github.io/prefixfree/" target="_blank">Prefixfree</a> or <a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a>
+            </p>
+          </section>
+        </section>
+        <section>
+          <h3>
+            CSS Frameworks
+          </h3>
+          <section>
+            <h4>
+              Rocket
+            </h4>
+            <p>
+              <a href="https://ganlanyuan.github.io/rocket/" target="_blank">website</a>
+            </p>
+          </section>
+        </section>
+        <section>
+          <h3>
+            CSS Styles
+          </h3>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>

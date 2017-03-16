@@ -1,0 +1,34 @@
+{% macro get(blockName) %}
+
+{% if blockName === 'html-indentation' %}
+<ul>
+..<li>Item</li>
+..<li>Item</li>
+</ul>
+
+{% elif blockName === 'html-attr' %}
+<a class="link" id="link" data-toggle="modal" href="#">Example link</a>
+
+{% elif blockName === 'html-classes' %}
+<a href="" class="js-popup">Log In</a>
+
+{% elif blockName === 'html-comments-1' %}
+<?php
+// Some comments
+?>
+<p>Lorem ipsum dolor sit amet.</p>
+
+{% elif blockName === 'html-comments-2' %}
+{{ "{# Some comments #}" }}
+<p>Lorem ipsum dolor sit amet.</p>
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% endif %}
+{% endmacro %}

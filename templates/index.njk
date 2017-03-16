@@ -1,0 +1,60 @@
+{% set pagename = 'guidelines' %}
+
+{% extends 'parts/layout.njk' %}
+{% import 'code/scss/_style.njk' as style %}
+{% import 'code/markup.njk' as markup %}
+
+{% set reg_M = r/^M\-(\d*|.*)$/ %}
+
+{% block main %}
+<main>
+  <header>
+    <h1>Frontend Guidelines</h1>
+    <p>Frontend guidelines to make team members write consistent & cohesive code together.</p>
+  </header>
+  {% for _name, _content in guidelines %}
+  <section>
+    <h2>{{ _name }}</h2>
+  
+    {% for __name, __content in _content %}
+    <section>
+      <h3>{{ __name }}</h3>
+  
+      {% for ___name, ___content in __content %}
+      <section>
+        <h4>{{ ___name }}</h4>
+  
+        {% if is('Array', ___content) %}
+  
+          {% for item in ___content %}
+  
+            {% if reg_M.test(item) %}
+              <pre><code class="language-markup" id="">
+              {%- filter trim %}{{ markup.get(item.replace('M-', '')) }}{% endfilter -%}
+              </code></pre>
+            {% else %} 
+              <p>{{ 
+                item 
+                | nl2br
+                | replace('`-', '<code class="language-html">') 
+                | replace('-`', '</code>') 
+                | safe 
+              }}</p>
+            {% endif %}
+  
+          {% endfor %}
+  
+        {% elif is('String', ___content) %}
+          <p>{{ ___content | nl2br | safe }}</p>
+        {% endif %}
+  
+      </section>
+      {% endfor %}
+  
+    </section>
+    {% endfor %}
+  
+  </section>
+  {% endfor %}
+</main>
+{% endblock %}

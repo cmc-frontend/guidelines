@@ -1,0 +1,6 @@
+main { max-width: 60em; margin: 0 auto; }
+section section { margin: 3em 2.5em; }
+h4 { position: relative; }
+h4:before, 
+h4:after { content: ''; width: 8px; height: 8px; left: 0; top: 0; background-color: blue; display: block; position: absolute; margin: 4px 0 0 -20px; }
+h4:after { background-color: lightblue; left: 2px; top: 2px; z-index: -1; }
