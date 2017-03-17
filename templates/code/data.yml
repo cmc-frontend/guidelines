@@ -1,0 +1,141 @@
+---
+guidelines:
+
+  HTML:
+    HTML Principles:
+      Standalone:
+      - HTML itself should work without CSS and JavaScript. The content should be
+        accessible, form should be able to submited.
+      - Disable images, CSS and JavaScript to check if it works.
+
+      Semantics:
+      - Use semantics elements (`-article-`, `-aside-`, `-figure-`, `-figcaption-`,
+        `-header-`, `-footer-`, `-main-`, `-nav-`, `-section-`) instead of generic
+        elements (`-div-`, `-span-`).
+      - Don't know which element to use, <a href=http://html5bot.webflow.io/ target=_blank>click
+        here</a>.
+
+      Document outline:
+      - <a href=https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm/
+        target=_blank>html5 and the document outlining algorithm/</a>
+      - <a href=http://html5doctor.com/outlines/ target=_blank>html5 outlines</a>
+      - <a href=https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+        target=_blank>Using HTML sections and outlines</a>
+      - <a href=https://bitsofco.de/document-outlines-in-html-5-1/ target=_blank>document
+        outlines in html5.1/</a>
+      - <a href=https://css-tricks.com/document-outline-dilemma/ target=_blank>document
+        outline dilemma</a>
+      - <a href=https://gsnedders.html5.org/outliner/ target=_blank>outliner</a>
+
+      Inline styles: Avoid inline styles or event handlers
+
+      Indentation:
+      - Use 2 spaces for indentation. This is the only way to guarantee code renders
+        the same in any environment.
+      - M-html-indentation
+
+      Attributes: 
+      - | 
+        "HTML attributes should come in this order for easier reading:"
+        `-class-`
+        `-id, name-` 
+        `-data-*-` 
+        `-src, for, type, href, value-` 
+        `-title, alt,
+        role, aria-*-`
+      - Classes are used most often, so they come first. Ids are more specific and
+        should be used sparingly, for in-page bookmarks, so they come second.
+      - M-html-attr
+
+      Classes:
+      - + Always use lower case.
+      - + The classes used for javaScript must start with `-js--`.
+      - M-html-classes
+
+      Comments:
+      - "Don't use HTML comments, because: "
+      - + HTML comments should be visible only for developer.
+      - + HTML comments increase file size.
+      - 'Use comments in backend/templating language:'
+      - M-html-comments-1
+      - M-html-comments-2
+
+    HTML Tools:
+
+      Templating engine: 'Nunjucks: <a href=https://mozilla.github.io/nunjucks target=_blank>website</a>,
+        <a href=https://mozilla.github.io/nunjucks/templating.html target=_blank>templating</a>,
+        <a href=https://mozilla.github.io/nunjucks/api.html target=_blank>API</a>'
+
+  CSS:
+
+    CSS Principles: {}
+
+    CSS Methodology: 
+    - 'SMACSS: <a href=https://smacss.com/ target=_blank>https://smacss.com/</a>'
+    - 'BEM: <a href=https://en.bem.info/method/ target=_blank>https://en.bem.info/method/</a>'
+    - 'OOCSS: <a href=http://oocss.org/ target=_blank>http://oocss.org/</a>'
+    - 'ITCSS: <a href=https://speakerdeck.com/dafed/managing-css-projects-with-itcss target=_blank>https://speakerdeck.com/dafed/managing-css-projects-with-itcss</a>'
+
+    CSS Tools:
+      Preprocessor: 'SASS: <a href=http://sass-lang.com target=_blank>website</a>,
+        <a href=https://sass-guidelin.es target=_blank>SASS Guidelines</a>'
+      CSS Base:
+      - 'Normalize: <a href=https://necolas.github.io/normalize.css/ target=_blank>website</a>'
+      - 'Reset: <a href=https://github.com/ganlanyuan/startpoint/blob/master/src/scss/base/_reset.scss target=_blank>link</a>'
+      Postprocessors: <a href=https://leaverou.github.io/prefixfree/ target=_blank>Prefixfree</a>
+        or <a href=https://github.com/postcss/autoprefixer target=_blank>Autoprefixer</a>
+
+    CSS Frameworks:
+      Rocket: <a href=https://ganlanyuan.github.io/rocket/ target=_blank>website</a>
+
+    CSS Styles: {}
+
+  JavaScript:
+
+    JavaScript Principles:
+
+    JavaScript tools:
+      JavaScript framework:
+      Polyfills:
+        polyfill.io, <a href=https://qa.polyfill.io/v2/docs/ target=_blank>https://qa.polyfill.io/v2/docs/</a>
+      Dependencies:
+        go-native, <a href=https://github.com/ganlanyuan/go-native target=_blank>https://github.com/ganlanyuan/go-native</a>
+      Test: 
+        testcafe, <a href=https://devexpress.github.io/testcafe/ target=_blank>https://devexpress.github.io/testcafe/</a>
+
+    JavaScript Style :
+
+  Media:
+
+    Icons:
+
+      icon font:
+        - <a href=http://fontawesome.io/ target=_blank>http://fontawesome.io/</a>
+        - <a href=http://fontastic.me/ target=_blank>http://fontastic.me/</a>
+
+      svg sprites:
+        - <a href=https://github.com/ganlanyuan/icons target=_blank>https://github.com/ganlanyuan/icons</a>
+        - https://ganlanyuan.github.io/icons/
+
+      responsive images:
+        srcset
+
+    # - **Are you using any [tools](https://addyosmani.com/blog/image-optimization-tools/) to optimize and serve images**?
+
+  Fonts:
+
+  Performance:
+
+  Accessibility:
+
+  Tooling:
+
+  Version control:
+
+  Support and Optimization:
+
+  Localization:
+
+  Deployment/Integration:
+
+  Documentation:

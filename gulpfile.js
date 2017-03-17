@@ -1,11 +1,16 @@
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const browserSync = require('browser-sync').create();
+const nunjucks = require('nunjucks');
+
+let customEnv = new nunjucks.Environment();
+customEnv.addFilter('shorten', function(str, count) {
+  return str.slice(0, count || 3);
+});
 
 let PATHS = {
   templates: 'templates/',
 };
-
 let dev = true;
 
 function errorlog (error) {  
@@ -30,6 +35,13 @@ gulp.task('scssToNjk', function () {
     .pipe(gulp.dest(PATHS.templates + 'code/scss'));
 });
 
+// yml to json
+gulp.task('ymlToJson', function () {
+  return gulp.src(PATHS.templates + 'code/*.yml')
+    .pipe($.yaml({space: 2}))
+    .pipe(gulp.dest(PATHS.templates + 'code'));
+});
+
 // Nunjucks Task
 gulp.task('html', function() {
   let data = requireUncached('./' + PATHS.templates + 'code/data.json');
@@ -44,10 +56,11 @@ gulp.task('html', function() {
   };
 
   return gulp.src(PATHS.templates + '*.njk')
-    .pipe($.nunjucks.compile(data), {
+    .pipe($.nunjucks.compile(data, {
       watch: true,
       noCache: true,
-    })
+      // env: customEnv,
+    }))
     .pipe($.rename(function (path) { path.extname = ".html"; }))
     .pipe($.if(dev, $.htmltidy({
       doctype: 'html5',
@@ -80,6 +93,7 @@ gulp.task('server', function() {
     notify: false
   });
 
+  gulp.watch([PATHS.templates + 'code/*.yml'], ['ymlToJson']);
   gulp.watch([PATHS.templates + '**/*.scss'], ['scssToNjk']);
   gulp.watch([PATHS.templates + '**/*.njk', PATHS.templates + '**/*.json'], ['html']);
   gulp.watch('**/*.html').on('change', browserSync.reload);

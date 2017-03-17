@@ -20,36 +20,75 @@
     <section>
       <h3>{{ __name }}</h3>
   
-      {% for ___name, ___content in __content %}
-      <section>
-        <h4>{{ ___name }}</h4>
-  
-        {% if is('Array', ___content) %}
-  
-          {% for item in ___content %}
-  
-            {% if reg_M.test(item) %}
-              <pre><code class="language-markup" id="">
-              {%- filter trim %}{{ markup.get(item.replace('M-', '')) }}{% endfilter -%}
-              </code></pre>
-            {% else %} 
-              <p>{{ 
-                item 
-                | nl2br
-                | replace('`-', '<code class="language-html">') 
-                | replace('-`', '</code>') 
-                | safe 
-              }}</p>
-            {% endif %}
-  
-          {% endfor %}
-  
-        {% elif is('String', ___content) %}
-          <p>{{ ___content | nl2br | safe }}</p>
-        {% endif %}
-  
-      </section>
-      {% endfor %}
+      {% if is('Object', __content) %}
+        {% for ___name, ___content in __content %}
+        <section>
+          <h4>{{ ___name }}</h4>
+    
+          {% if is('Array', ___content) %}
+    
+            {% for item in ___content %}
+    
+              {% if reg_M.test(item) %}
+                <pre><code class="language-markup" id="">
+                {%- filter trim %}{{ markup.get(item.replace('M-', '')) }}{% endfilter -%}
+                </code></pre>
+              {% else %} 
+                <p>{{ 
+                  item 
+                  | nl2br
+                  | replace('`-', '<code class="language-html">') 
+                  | replace('-`', '</code>') 
+                  | safe 
+                }}</p>
+              {% endif %}
+    
+            {% endfor %}
+    
+          {% elif is('String', ___content) %}
+          <p>{{ 
+              ___content 
+              | nl2br
+              | replace('`-', '<code class="language-html">') 
+              | replace('-`', '</code>') 
+              | safe 
+            }}</p>
+          {% endif %}
+    
+        </section>
+        {% endfor %}
+
+      {% elif is('Array', __content) %}
+
+        {% for item in __content %}
+        
+          {% if reg_M.test(item) %}
+            <pre><code class="language-markup" id="">
+            {%- filter trim %}{{ markup.get(item.replace('M-', '')) }}{% endfilter -%}
+            </code></pre>
+          {% else %} 
+            <p>{{ 
+              item 
+              | nl2br
+              | replace('`-', '<code class="language-html">') 
+              | replace('-`', '</code>') 
+              | safe 
+            }}</p>
+          {% endif %}
+        
+        {% endfor %}
+
+      {% elif is('String', __content) %}
+        <p>{{ 
+          __content 
+          | nl2br
+          | replace('`-', '<code class="language-html">') 
+          | replace('-`', '</code>') 
+          | safe 
+        }}</p>
+
+      {% endif %}
+      
   
     </section>
     {% endfor %}

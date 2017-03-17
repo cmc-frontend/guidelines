@@ -1,94 +1,13 @@
-# Frontend Guidelines
-Frontend guidelines to make team members write consistent & cohesive code together.
-
-## HTML
-### HTML Principles
-- **Standalone**  
-HTML itself should work without CSS and JavaScript. The content should be accessible, form should be able to submited.  
-Disable images, CSS and JavaScript to check if it works.  
-
-- **Semantics**  
-Use semantics elements (`<article>`, `<aside>`, `<figure>`, `<figcaption>`, `<header>`, `<footer>`, `<main>`, `<nav>`, `<section>`) instead of generic elements (`<div>`, `<span>`).   
-http://html5bot.webflow.io/  
-
-- **Document outline**  
-https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm/  
-http://html5doctor.com/outlines/  
-https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines  
-https://bitsofco.de/document-outlines-in-html-5-1/  
-https://css-tricks.com/document-outline-dilemma/  
-https://gsnedders.html5.org/outliner/  
-
-- Avoid **inline styles** or **event handlers**  
-- **Indentation**  
-Use 2 spaces for indentation. This is the only way to guarantee code renders the same in any environment.
-```html
-<ul>
-••<li>Item</li>
-</ul>
-```
-
-- **Attributes**  
-HTML attributes should come in this order for easier reading:  
-  1. `class`   
-  2. `id, name`   
-  3. `data-*`  
-  4. `src, for, type, href, value`  
-  5. `title, alt`, `role, aria-*`   
-
-Classes are used most often, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.
-```html
-<a class="link" id="link" data-toggle="modal" href="#">Example link</a>
-```
-
-- **Classes**  
-  - Always use lower case.  
-  - The classes used for javaScript must start with `js-`.
-```html
-<a href="" class="js-popup">Log In</a>
-```
-- **Comments**  
-Don't use HTML comments, because:
-  - HTML comments should be visible only for developer.
-  - HTML comments increase file size.  
-
-Use comments in backend/templating language:
-```php
-<?php
-// Some comments
-?>
-<p>Lorem ipsum dolor sit amet.</p>
-```
-```njk
-{# Some comments #}
-<p>Lorem ipsum dolor sit amet.</p>
-```
-
-### HTML Tools  
-- **templating engine**   
-Nunjucks: [website](https://mozilla.github.io/nunjucks/), [templating](https://mozilla.github.io/nunjucks/templating.html), [API](https://mozilla.github.io/nunjucks/api.html)  
-
----------------
-
 ## CSS 
 
 ### CSS Principles
 - **What are some general principles your team should follow when writing CSS?** *(For example, modularity, avoiding long selector strings, etc. See [these](http://cssguidelin.es/) [resources](http://www.yellowshoe.com.au/standards/#css) [for](http://manuals.gravitydept.com/code/css) [inspiration](http://codeguide.co/#css))*
 
 ### CSS Methodology
-- **Is your team using a CSS methodology** *(such as [SMACSS](https://smacss.com/), [BEM](https://en.bem.info/method/), or [OOCSS](http://oocss.org/))*? If yes, where is the documentation for that methodology?
-- **Are you deviating from the methodology in any way?** If so, can you highlight these conventions?
 
 ### CSS Tools
-- **Is the team using a preprocessor** *(such as [Sass](http://sass-lang.com/) or [Less](http://lesscss.org/))*?
-- **What are the guidelines for using that preprocessor** *(check out [Sass Guidelines](https://sass-guidelin.es/) for inspiration)*?
-- **Are you using a CSS base** *(such as [Normalize](https://necolas.github.io/normalize.css/) or a [reset](http://meyerweb.com/eric/tools/css/reset/))*?
-- **Are you using any CSS postprocessors** *(such as [Prefixfree](https://leaverou.github.io/prefixfree/) or [Autoprefixer](https://github.com/postcss/autoprefixer))*?
-- **Are there specific CSS techniques you're utilizing** *(such as [critical CSS](https://www.smashingmagazine.com/2015/08/understanding-critical-css/))*?
 
 ### CSS Frameworks
-- **Is the team using a framework** *(such as [Bootstrap](https://getbootstrap.com/) or [Foundation](http://foundation.zurb.com/))*? If yes, where is the documentation for that framework?
-- **Are you deviating from the framework in any way?** If so, can you highlight these conventions?
 
 ### CSS Style
 - **Spaces or Tabs?**
