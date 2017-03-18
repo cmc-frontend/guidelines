@@ -1,11 +1,41 @@
+{# variables #}
 {% set pagename = 'guidelines' %}
-
-{% extends 'parts/layout.njk' %}
-{% import 'code/scss/_style.njk' as style %}
-{% import 'code/markup.njk' as markup %}
-
 {% set reg_M = r/^M\-(\d*|.*)$/ %}
 
+{# template & code #}
+{% extends 'parts/layout.njk' %}
+{% import 'code/scss/_style.njk' as style with context %}
+{% import 'code/markup.njk' as markup with context %}
+
+{# macros #}
+{% macro outputString(str) %}
+  <p>{{ 
+    str 
+    | nl2br
+    | replace('`-', '<code class="language-html">') 
+    | replace('-`', '</code>') 
+    | urlize
+    | safe 
+  }}</p>
+{% endmacro %}
+
+{% macro outputArray(arr) %}
+  {% for item in arr %}
+    {% if reg_M.test(item) %}
+      {% set name = item.replace('M-', '') %}
+      {% set content = markup.get(name) %}
+      {# couldn't use block filter #}
+      {# {%- filter trim %}{{ content }}{% endfilter -%} #}
+      <pre><code class="language-markup" id="">
+      {{- content + '&' | replace('&', '') -}}
+      </code></pre>
+    {% else %} 
+      {{ outputString(item) }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+{# main block #}
 {% block main %}
 <main>
   <header>
@@ -14,84 +44,41 @@
   </header>
   {% for _name, _content in guidelines %}
   <section>
-    <h2>{{ _name }}</h2>
+    <h2>{{ _name | title }}</h2>
   
-    {% for __name, __content in _content %}
-    <section>
-      <h3>{{ __name }}</h3>
-  
-      {% if is('Object', __content) %}
-        {% for ___name, ___content in __content %}
-        <section>
-          <h4>{{ ___name }}</h4>
+    {% if is('Object', _content) %}
+      {% for __name, __content in _content %}
+      <section>
+        <h3>{{ __name | title }}</h3>
     
-          {% if is('Array', ___content) %}
-    
-            {% for item in ___content %}
-    
-              {% if reg_M.test(item) %}
-                <pre><code class="language-markup" id="">
-                {%- filter trim %}{{ markup.get(item.replace('M-', '')) }}{% endfilter -%}
-                </code></pre>
-              {% else %} 
-                <p>{{ 
-                  item 
-                  | nl2br
-                  | replace('`-', '<code class="language-html">') 
-                  | replace('-`', '</code>') 
-                  | safe 
-                }}</p>
-              {% endif %}
-    
-            {% endfor %}
-    
-          {% elif is('String', ___content) %}
-          <p>{{ 
-              ___content 
-              | nl2br
-              | replace('`-', '<code class="language-html">') 
-              | replace('-`', '</code>') 
-              | safe 
-            }}</p>
-          {% endif %}
-    
-        </section>
-        {% endfor %}
-
-      {% elif is('Array', __content) %}
-
-        {% for item in __content %}
-        
-          {% if reg_M.test(item) %}
-            <pre><code class="language-markup" id="">
-            {%- filter trim %}{{ markup.get(item.replace('M-', '')) }}{% endfilter -%}
-            </code></pre>
-          {% else %} 
-            <p>{{ 
-              item 
-              | nl2br
-              | replace('`-', '<code class="language-html">') 
-              | replace('-`', '</code>') 
-              | safe 
-            }}</p>
-          {% endif %}
-        
-        {% endfor %}
-
-      {% elif is('String', __content) %}
-        <p>{{ 
-          __content 
-          | nl2br
-          | replace('`-', '<code class="language-html">') 
-          | replace('-`', '</code>') 
-          | safe 
-        }}</p>
-
-      {% endif %}
+        {% if is('Object', __content) %}
+          {% for ___name, ___content in __content %}
+          <section>
+            <h4>{{ ___name | title }}</h4>
       
-  
-    </section>
-    {% endfor %}
+            {% if is('Array', ___content) %}
+              {{ outputArray(___content) }}
+            {% elif is('String', ___content) %}
+              {{ outputString(___content) }}
+            {% endif %}
+      
+          </section>
+          {% endfor %}
+
+        {% elif is('Array', __content) %}
+          {{ outputArray(__content) }}
+        {% elif is('String', __content) %}
+          {{ outputString(__content) }}
+        {% endif %}
+    
+      </section>
+      {% endfor %}
+
+    {% elif is('Array', _content) %}
+      {{ outputArray(_content) }}
+    {% elif is('String', _content) %}
+      {{ outputString(_content) }}
+    {% endif %}
   
   </section>
   {% endfor %}

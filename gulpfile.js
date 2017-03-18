@@ -100,6 +100,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('default', [
-  'html',
+  // 'ymlToJson'
+  // 'html',
   'server',
 ]);

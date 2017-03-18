@@ -12,20 +12,15 @@ guidelines:
       - Use semantics elements (`-article-`, `-aside-`, `-figure-`, `-figcaption-`,
         `-header-`, `-footer-`, `-main-`, `-nav-`, `-section-`) instead of generic
         elements (`-div-`, `-span-`).
-      - Don't know which element to use, <a href=http://html5bot.webflow.io/ target=_blank>click
-        here</a>.
+      - Not sure which element to use? http://html5bot.webflow.io/
 
       Document outline:
-      - <a href=https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm/
-        target=_blank>html5 and the document outlining algorithm/</a>
-      - <a href=http://html5doctor.com/outlines/ target=_blank>html5 outlines</a>
-      - <a href=https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
-        target=_blank>Using HTML sections and outlines</a>
-      - <a href=https://bitsofco.de/document-outlines-in-html-5-1/ target=_blank>document
-        outlines in html5.1/</a>
-      - <a href=https://css-tricks.com/document-outline-dilemma/ target=_blank>document
-        outline dilemma</a>
-      - <a href=https://gsnedders.html5.org/outliner/ target=_blank>outliner</a>
+      - https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm
+      - http://html5doctor.com/outlines/
+      - https://bitsofco.de/document-outlines-in-html-5-1/
+      - https://css-tricks.com/document-outline-dilemma/
+      - Check outline
+      - https://gsnedders.html5.org/outliner/
 
       Inline styles: Avoid inline styles or event handlers
 
@@ -62,32 +57,47 @@ guidelines:
 
     HTML Tools:
 
-      Templating engine: 'Nunjucks: <a href=https://mozilla.github.io/nunjucks target=_blank>website</a>,
-        <a href=https://mozilla.github.io/nunjucks/templating.html target=_blank>templating</a>,
-        <a href=https://mozilla.github.io/nunjucks/api.html target=_blank>API</a>'
+      Templating engine: 
+        - 'Nunjucks:'
+        - https://mozilla.github.io/nunjucks
+        - https://mozilla.github.io/nunjucks/templating.html
+        - https://mozilla.github.io/nunjucks/api.html
 
   CSS:
 
+# - **What are some general principles your team should follow when writing CSS?** *(For example, modularity, avoiding long selector strings, etc. See [these](http://cssguidelin.es/) [resources](http://www.yellowshoe.com.au/standards/#css) [for](http://manuals.gravitydept.com/code/css) [inspiration](http://codeguide.co/#css))*
     CSS Principles: {}
 
     CSS Methodology: 
-    - 'SMACSS: <a href=https://smacss.com/ target=_blank>https://smacss.com/</a>'
-    - 'BEM: <a href=https://en.bem.info/method/ target=_blank>https://en.bem.info/method/</a>'
-    - 'OOCSS: <a href=http://oocss.org/ target=_blank>http://oocss.org/</a>'
-    - 'ITCSS: <a href=https://speakerdeck.com/dafed/managing-css-projects-with-itcss target=_blank>https://speakerdeck.com/dafed/managing-css-projects-with-itcss</a>'
+    - 'SMACSS: https://smacss.com/'
+    - 'BEM: https://en.bem.info/method/'
+    - 'OOCSS: http://oocss.org/'
+    - 'ITCSS: https://speakerdeck.com/dafed/managing-css-projects-with-itcss'
 
     CSS Tools:
-      Preprocessor: 'SASS: <a href=http://sass-lang.com target=_blank>website</a>,
-        <a href=https://sass-guidelin.es target=_blank>SASS Guidelines</a>'
+
+      Preprocessor: 
+      - 'SASS: '
+      - http://sass-lang.com
+      - https://sass-guidelin.es
+
       CSS Base:
-      - 'Normalize: <a href=https://necolas.github.io/normalize.css/ target=_blank>website</a>'
-      - 'Reset: <a href=https://github.com/ganlanyuan/startpoint/blob/master/src/scss/base/_reset.scss target=_blank>link</a>'
-      Postprocessors: <a href=https://leaverou.github.io/prefixfree/ target=_blank>Prefixfree</a>
-        or <a href=https://github.com/postcss/autoprefixer target=_blank>Autoprefixer</a>
+      - 'Normalize:'
+      - https://necolas.github.io/normalize.css/
+      - 'Reset:'
+      - https://github.com/ganlanyuan/startpoint/blob/master/src/scss/base/_reset.scss
+
+      Postprocessors: 
+      - https://leaverou.github.io/prefixfree/
+      - https://github.com/postcss/autoprefixer
 
     CSS Frameworks:
-      Rocket: <a href=https://ganlanyuan.github.io/rocket/ target=_blank>website</a>
+      Rocket: https://ganlanyuan.github.io/rocket/
 
+# - **Spaces or Tabs?**
+# - **Spacing around rules?**
+# - **[Grouping](https://smacss.com/book/formatting#grouping) properties?**
+# - **What does CSS commenting look like?** 
     CSS Styles: {}
 
   JavaScript:
@@ -95,13 +105,17 @@ guidelines:
     JavaScript Principles:
 
     JavaScript tools:
+
       JavaScript framework:
+
       Polyfills:
-        polyfill.io, <a href=https://qa.polyfill.io/v2/docs/ target=_blank>https://qa.polyfill.io/v2/docs/</a>
+        polyfill.io, https://qa.polyfill.io/v2/docs/
+
       Dependencies:
-        go-native, <a href=https://github.com/ganlanyuan/go-native target=_blank>https://github.com/ganlanyuan/go-native</a>
+        go-native, https://github.com/ganlanyuan/go-native
+
       Test: 
-        testcafe, <a href=https://devexpress.github.io/testcafe/ target=_blank>https://devexpress.github.io/testcafe/</a>
+        testcafe, https://devexpress.github.io/testcafe/
 
     JavaScript Style :
 
@@ -110,32 +124,99 @@ guidelines:
     Icons:
 
       icon font:
-        - <a href=http://fontawesome.io/ target=_blank>http://fontawesome.io/</a>
-        - <a href=http://fontastic.me/ target=_blank>http://fontastic.me/</a>
+        - http://fontawesome.io/
+        - http://fontastic.me/
 
       svg sprites:
-        - <a href=https://github.com/ganlanyuan/icons target=_blank>https://github.com/ganlanyuan/icons</a>
+        - https://github.com/ganlanyuan/icons
         - https://ganlanyuan.github.io/icons/
 
-      responsive images:
-        srcset
+    responsive images:
+      srcset
 
-    # - **Are you using any [tools](https://addyosmani.com/blog/image-optimization-tools/) to optimize and serve images**?
+    optimize images:
+      https://addyosmani.com/blog/image-optimization-tools/
 
-  Fonts:
+  # Fonts:
+    # - **How do you load custom fonts?**
+    # - **Do you use any tools to help implement web fonts** *(such as [Font Squirrel](https://www.fontsquirrel.com/), etc)*?
+    # - **Do you use a service to manage and serve custom fonts** *(such as [Fonts.com](https://www.fonts.com/), [Typekit](https://typekit.com/), etc)*?
 
   Performance:
+    # - **Do you use performance budgets?** If so, what [metrics](https://timkadlec.com/2014/11/performance-budget-metrics/) are you using to determine budgets? Where are you keeping track of performance budgets?
+
+    measuring project's speed:
+      - http://tools.pingdom.com/
+      - https://developers.google.com/speed/pagespeed/
+
+    decrease file size:
+      - https://css-tricks.com/snippets/htaccess/active-gzip-compression/
+      - https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization
+
+    Tools:
+      - http://www.webpagetest.org/
+      - https://aerotwist.com/blog/bigrig/
+      - https://speedcurve.com/
 
   Accessibility:
 
+    checklist: http://a11yproject.com/checklist.html
+
+    Tools: http://a11yproject.com/resources.html
+
   Tooling:
 
+    Task runner:
+      Gulp: http://gulpjs.com/
+
+    dependency manager:
+      Bower: http://bower.io/
+
+    scaffolding tool:
+      Yeoman: http://yeoman.io/
+
+    reinforce frontend style:
+      Editor Config: http://editorconfig.org/
+      linters: https://github.com/CSSLint/csslint
+
+    Container:
+      docker: 
+        - website https://www.docker.com/
+        - download https://store.docker.com/search?offering=community&platform=desktop&q=&type=edition
+        - docker image, https://hub.docker.com/r/cmcdev/web/, https://github.com/ganlanyuan/dockerfile
+
   Version control:
+    git: 
+    - https://git-scm.com/
+    - The code is hosted on https://git.cmcintra.net/
+    # - **Do you use a version control workflow** *(such as [gitflow](http://nvie.com/posts/a-successful-git-branching-model/), [centralized](https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow), [feature-branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), etc)*?
+    # - **Who's responsible for managing and governing the version controlled code?**
+    # - **Where are issues tracked?**
 
   Support and Optimization:
+    # It's important to recognize the difference between ["support" and "optimization"](http://bradfrost.com/blog/mobile/support-vs-optimization/). You should do your best to support as many environments as possible while simultaneously optimizing for the environments that make the most sense for your business and users. 
+
+    # - **What browsers are you *optimizing* for?** 
+    # - **What devices are you *optimizing* for?** 
+    # - **Are you using a [graded browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) system?**
+    # - **Are there specific components that require [more specific grading](https://www.filamentgroup.com/lab/grade-the-components.html)?** 
 
   Localization:
+    different languages:
+    # - **Is your website served in different languages?** If so, what considerations do you need to address when localizing for other languages?
 
-  Deployment/Integration:
+  # Deployment/Integration:
+    # - **How is your front-end code integrated into a production environment?**
 
-  Documentation:
+  # Documentation:
+    # - **Are you using a [pattern library tool](http://styleguides.io/tools.html) to document your front-end architecture?**
+    # - **Where does your documentation live?** What are the links to the documentation?
+    # - **Who's responsible for maintaining and governing the documentation?**
+    # - **What happens when the guidelines are updated?**
+
+  Further reading:   
+  - http://bradfrost.com/blog/post/frontend-guidelines-exercise/  
+  - http://www.yellowshoe.com.au/standards  
+  - http://codeguide.co/  
+  - http://manuals.gravitydept.com/code  
+  - https://github.com/bendc/frontend-guidelines/blob/master/README.md
