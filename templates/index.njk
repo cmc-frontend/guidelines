@@ -32,7 +32,7 @@
   {# couldn't use block filter #}
   {# {%- filter trim %}{{ source.get(name.replace(prefix, '')) }}{% endfilter -%} #}
   <pre><code class="language-{{ lang }}" id="">
-  {{- source.get(name.replace(prefix, '')) -}}
+  {{- source.get(name.replace(prefix, '')) + '&' | replace('&', '') -}}
   </code></pre>
 {% endmacro %}
 

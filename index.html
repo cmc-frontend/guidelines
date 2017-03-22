@@ -1,34 +1,38 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frontend Guidelines</title><meta name="description" content=""><meta name="author" content=""><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100, 300,400,700"><link rel="stylesheet" href="assets/css/prism.css"><style>body{margin:0;font-family:Lato,sans-serif}</style><link rel="stylesheet" href="assets/css/guidelines.css"><script src="assets/js/prefixfree.js" async defer></script><script src="assets/js/prism.js" async defer></script></head><body><main><header><h1>Frontend Guidelines</h1><p>Frontend guidelines to make team members write consistent & cohesive code together.</p></header><section><h2>Html</h2><section><h3 class="has-title-decoration title-decoration_blue">Html Principles</h3><section><h4 class="has-title-decoration title-decoration_purple">Standalone</h4><p>HTML itself should work without CSS and JavaScript. The content should be accessible, form should be able to submited.</p><p>Disable images, CSS and JavaScript to check if it works.</p></section><section><h4 class="has-title-decoration title-decoration_purple">Semantics</h4><p>Use semantics elements (<code class="language-html">article</code>,<code class="language-html">aside</code>,<code class="language-html">figure</code>,<code class="language-html">figcaption</code>,<code class="language-html">header</code>,<code class="language-html">footer</code>,<code class="language-html">main</code>,<code class="language-html">nav</code>,<code class="language-html">section</code>) instead of generic elements (<code class="language-html">div</code>,<code class="language-html">span</code>).</p><p>Not sure which element to use?<a href="http://html5bot.webflow.io/">http://html5bot.webflow.io/</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Document Outline</h4><p><a href="https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm">https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm</a></p><p><a href="http://html5doctor.com/outlines/">http://html5doctor.com/outlines/</a></p><p><a href="https://bitsofco.de/document-outlines-in-html-5-1/">https://bitsofco.de/document-outlines-in-html-5-1/</a></p><p><a href="https://css-tricks.com/document-outline-dilemma/">https://css-tricks.com/document-outline-dilemma/</a></p><p>Check outline</p><p><a href="https://gsnedders.html5.org/outliner/">https://gsnedders.html5.org/outliner/</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Inline Styles</h4><p>Avoid inline styles or event handlers</p></section><section><h4 class="has-title-decoration title-decoration_purple">Indentation</h4><p>Use 2 spaces for indentation. This is the only way to guarantee code renders the same in any environment.</p><pre><code class="language-markup" id="">
 
 
-<ul>
-..<li>Item</li>
-..<li>Item</li>
-</ul>
+&lt;ul>
+..&lt;li>Item&lt;/li>
+..&lt;li>Item&lt;/li>
+&lt;/ul>
 
 
 </code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Attribute Order</h4><p>"HTML attributes should come in this order for easier reading:"<br><code class="language-html">class</code><br><code class="language-html">id, name</code><br><code class="language-html">data-*</code><br><code class="language-html">src, for, type, href, value</code><br><code class="language-html">title, alt,<br>role, aria-*</code><br></p><p>Classes are used most often, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.</p><pre><code class="language-markup" id="">
 
 
-<a class="link" id="link" data-toggle="modal" href="#">Example link</a>
+&lt;a class="link" id="link" data-toggle="modal" href="#">Example link&lt;/a>
 
 
 </code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Classes</h4><p>+ Always use lower case.</p><p>+ The classes used for javaScript must start with<code class="language-html">js-</code>.</p><pre><code class="language-markup" id="">
 
 
-<a href="" class="js-popup">Log In</a>
+&lt;a href="" class="js-popup">Log In&lt;/a>
 
 
-</code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Comments</h4><p>Don't use HTML comments, because:</p><p>+ HTML comments should be visible only for developer.</p><p>+ HTML comments increase file size.</p><p>Use comments in backend/templating language:</p><pre><code class="language-markup" id=""> <?php
+</code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Comments</h4><p>Don't use HTML comments, because:</p><p>+ HTML comments should be visible only for developer.</p><p>+ HTML comments increase file size.</p><p>Use comments in backend/templating language:</p><pre><code class="language-markup" id="">
+
+
+&lt;?php
 // Some comments
-?> <p>Lorem ipsum dolor sit amet.</p>
+?>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
 
 
 </code></pre><pre><code class="language-markup" id="">
 
 
 {# Some comments #}
-<p>Lorem ipsum dolor sit amet.</p>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
 
 
 </code></pre></section></section><section><h3 class="has-title-decoration title-decoration_blue">Html Tools</h3><section><h4 class="has-title-decoration title-decoration_purple">Starter Framework</h4><p>Startpoint:<a href="https://github.com/ganlanyuan/startpoint">https://github.com/ganlanyuan/startpoint</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Templating Engine</h4><p>Nunjucks:</p><p><a href="https://mozilla.github.io/nunjucks">https://mozilla.github.io/nunjucks</a></p><p><a href="https://mozilla.github.io/nunjucks/templating.html">https://mozilla.github.io/nunjucks/templating.html</a></p><p><a href="https://mozilla.github.io/nunjucks/api.html">https://mozilla.github.io/nunjucks/api.html</a></p></section></section></section><section><h2>Css</h2><section><h3 class="has-title-decoration title-decoration_blue">Css Principles</h3><section><h4 class="has-title-decoration title-decoration_purple">Syntax</h4><p>Use 2 spaces for indentation</p><p>Keep each selector to a single line when use group selector</p><p>One space after selector</p><p>One space after<code class="language-html">:</code>for each declaration</p><pre><code class="language-scss" id="">
