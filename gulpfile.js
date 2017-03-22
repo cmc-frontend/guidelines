@@ -11,7 +11,7 @@ customEnv.addFilter('shorten', function(str, count) {
 let PATHS = {
   templates: 'templates/',
 };
-let dev = true;
+let dev = false;
 
 function errorlog (error) {  
   console.error.bind(error);  
@@ -56,6 +56,7 @@ gulp.task('html', function() {
   };
 
   return gulp.src(PATHS.templates + '*.njk')
+    .pipe($.plumber())
     .pipe($.nunjucks.compile(data, {
       watch: true,
       noCache: true,
@@ -96,11 +97,11 @@ gulp.task('server', function() {
   gulp.watch([PATHS.templates + 'code/*.yml'], ['ymlToJson']);
   gulp.watch([PATHS.templates + '**/*.scss'], ['scssToNjk']);
   gulp.watch([PATHS.templates + '**/*.njk', PATHS.templates + '**/*.json'], ['html']);
-  gulp.watch('**/*.html').on('change', browserSync.reload);
+  gulp.watch(['**/*.html', '**/*.css']).on('change', browserSync.reload);
 });
 
 gulp.task('default', [
-  // 'ymlToJson'
+  // 'ymlToJson',
   // 'html',
   'server',
 ]);

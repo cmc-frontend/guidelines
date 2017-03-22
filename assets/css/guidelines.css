@@ -5,30 +5,58 @@ main {
 section section { 
   margin: 3em 2.5em; 
 }
+h1 {
+  font-size: 60px;
+  font-size: 3.75rem;
+}
 h2 {
   position: sticky;
   top: 0;
-  background-color: #fff;
   z-index: 999;
+  padding: 10px 0;
+
+  background-color: rgba(255, 255, 255, 0.85);
+
+  font-size: 36px;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 h3 { 
   position: relative; 
+
+  font-size: 24px;
+  font-size: 1.5em;
 }
-h3:before, 
-h3:after { 
+.has-title-decoration:before,
+.has-title-decoration:after { 
   content: ''; 
-  width: 8px; 
-  height: 8px; 
+  width: 0.43em; 
+  height: 0.43em; 
   left: 0; 
   top: 0; 
-  background-color: blue; 
   display: block; 
   position: absolute; 
-  margin: 4px 0 0 -20px; 
+  margin: 0.3em 0 0 -1em; 
 }
-h3:after { 
-  background-color: lightblue; 
-  left: 2px; 
-  top: 2px; 
+.has-title-decoration:after { 
+  left: 0.13em; 
+  top: 0.13em; 
   z-index: -1; 
+  opacity: 0.2;
+}
+.title-decoration_blue:before, .title-decoration_blue:after { background-color: hsl(300, 100%, 50%); }
+.title-decoration_purple:before, .title-decoration_purple:after { background-color: hsl(200, 100%, 50%); }
+
+h4 {
+  position: relative;
+
+  font-size: 20px;
+  font-size: 1.25em;
+}
+p {
+  line-height: 1.5;
+  margin: 0;
+
+  font-size: 16px;
+  font-size: 1rem;
 }

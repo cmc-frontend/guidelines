@@ -1,6 +1,7 @@
 {# variables #}
 {% set pagename = 'guidelines' %}
 {% set reg_M = r/^M\-(\d*|.*)$/ %}
+{% set reg_S = r/^S\-(\d*|.*)$/ %}
 
 {# template & code #}
 {% extends 'parts/layout.njk' %}
@@ -19,16 +20,28 @@
   }}</p>
 {% endmacro %}
 
+{% macro outputCode(name, lang) %}
+  {% if lang === 'markup' %}
+    {% set prefix = 'M-' %}
+    {% set source = markup %}
+  {% elif lang === 'scss' %}
+    {% set prefix = 'S-' %}
+    {% set source = style %}
+  {% endif %}
+
+  {# couldn't use block filter #}
+  {# {%- filter trim %}{{ source.get(name.replace(prefix, '')) }}{% endfilter -%} #}
+  <pre><code class="language-{{ lang }}" id="">
+  {{- source.get(name.replace(prefix, '')) -}}
+  </code></pre>
+{% endmacro %}
+
 {% macro outputArray(arr) %}
   {% for item in arr %}
     {% if reg_M.test(item) %}
-      {% set name = item.replace('M-', '') %}
-      {% set content = markup.get(name) %}
-      {# couldn't use block filter #}
-      {# {%- filter trim %}{{ content }}{% endfilter -%} #}
-      <pre><code class="language-markup" id="">
-      {{- content + '&' | replace('&', '') -}}
-      </code></pre>
+      {{ outputCode(item, 'markup') }}
+    {% elif reg_S.test(item) %}
+      {{ outputCode(item, 'scss') }}
     {% else %} 
       {{ outputString(item) }}
     {% endif %}
@@ -49,12 +62,12 @@
     {% if is('Object', _content) %}
       {% for __name, __content in _content %}
       <section>
-        <h3>{{ __name | title }}</h3>
+        <h3 class="has-title-decoration title-decoration_blue">{{ __name | title }}</h3>
     
         {% if is('Object', __content) %}
           {% for ___name, ___content in __content %}
           <section>
-            <h4>{{ ___name | title }}</h4>
+            <h4 class="has-title-decoration title-decoration_purple">{{ ___name | title }}</h4>
       
             {% if is('Array', ___content) %}
               {{ outputArray(___content) }}

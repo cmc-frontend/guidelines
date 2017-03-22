@@ -23,7 +23,7 @@
           "Use 2 spaces for indentation. This is the only way to guarantee code renders the same in any environment.",
           "M-html-indentation"
         ],
-        "Attributes": [
+        "Attribute order": [
           "\"HTML attributes should come in this order for easier reading:\"\n`-class-`\n`-id, name-` \n`-data-*-` \n`-src, for, type, href, value-` \n`-title, alt,\nrole, aria-*-`\n",
           "Classes are used most often, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.",
           "M-html-attr"
@@ -43,6 +43,9 @@
         ]
       },
       "HTML Tools": {
+        "Starter framework": [
+          "Startpoint: https://github.com/ganlanyuan/startpoint"
+        ],
         "Templating engine": [
           "Nunjucks:",
           "https://mozilla.github.io/nunjucks",
@@ -52,7 +55,50 @@
       }
     },
     "CSS": {
-      "CSS Principles": {},
+      "CSS Principles": {
+        "Syntax": [
+          "Use 2 spaces for indentation",
+          "Keep each selector to a single line when use group selector",
+          "One space after selector",
+          "One space after `-:-` for each declaration",
+          "S-syntax-space",
+          "Each declaration should appear on its own line",
+          "End all declaration with a semi-colon",
+          "Quote attribute values in selector, `-[type=\"text\"]-`",
+          "Avoid specifying units for zero values",
+          "Use meaningful class names and IDs",
+          "Avoid absolute positioning",
+          "Avoid !important",
+          "Don't use breaks <br> just to make space in your layout",
+          "Avoid hacks unless there is no other way to achieve what you want"
+        ],
+        "declaration order": [
+          "Related property declaration should be grouped together following the order\n`-Box-` (display, float, position, left, top, width, height and so on)\n`-Border & Background-`\n`-Text-` (font-family, font-size, text-transform, letter-spacing and so on)\n`-Other-`\n",
+          "S-declaration-order"
+        ],
+        "media query placement": [
+          "Place media queries close to their relevant rule sets. Don't bundle them all in a separate stylesheet or at the end of the document.",
+          "S-media-query-placement"
+        ],
+        "multi-lines vs single-line": [
+          "If a rule set includes only one declaration, put it in a signle line, otherwise, declarations should be split to separate lines.",
+          "S-single-declaration"
+        ],
+        "Selectors": [
+          "Use classes over element tag",
+          "Lowercase only",
+          "Hyphen over underscore",
+          "S-selectors-lowercase-hyphen",
+          "Keep selectors short (less than 3)",
+          "Take out unnecessary selector",
+          "S-selectors-unnecessary-selector",
+          "Avoid overriding styles",
+          "S-selectors-overriding-styles"
+        ],
+        "Further reading": [
+          "http://cssguidelin.es/"
+        ]
+      },
       "CSS Methodology": [
         "SMACSS: https://smacss.com/",
         "BEM: https://en.bem.info/method/",
@@ -78,8 +124,7 @@
       },
       "CSS Frameworks": {
         "Rocket": "https://ganlanyuan.github.io/rocket/"
-      },
-      "CSS Styles": {}
+      }
     },
     "JavaScript": {
       "JavaScript Principles": null,

@@ -1,616 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-      Frontend Guidelines
-    </title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100, 300,400,700">
-    <link rel="stylesheet" href="assets/css/prism.css">
-    <style>
-    body { margin: 0; font-family: 'Lato', sans-serif;}
-    </style>
-    <link rel="stylesheet" href="assets/css/guidelines.css">
-    <script src="assets/js/prefixfree.js" async defer>
-    </script>
-    <script src="assets/js/prism.js" async defer>
-    </script>
-  </head>
-  <body>
-    <main>
-      <header>
-        <h1>
-          Frontend Guidelines
-        </h1>
-        <p>
-          Frontend guidelines to make team members write consistent &amp; cohesive code together.
-        </p>
-      </header>
-      <section>
-        <h2>
-          Html
-        </h2>
-        <section>
-          <h3>
-            Html Principles
-          </h3>
-          <section>
-            <h4>
-              Standalone
-            </h4>
-            <p>
-              HTML itself should work without CSS and JavaScript. The content should be accessible, form should be able to submited.
-            </p>
-            <p>
-              Disable images, CSS and JavaScript to check if it works.
-            </p>
-          </section>
-          <section>
-            <h4>
-              Semantics
-            </h4>
-            <p>
-              Use semantics elements (<code class="language-html">article</code>, <code class="language-html">aside</code>, <code class="language-html">figure</code>, <code class="language-html">figcaption</code>, <code class="language-html">header</code>, <code class="language-html">footer</code>, <code class="language-html">main</code>, <code class="language-html">nav</code>, <code class="language-html">section</code>) instead of generic elements (<code class="language-html">div</code>, <code class="language-html">span</code>).
-            </p>
-            <p>
-              Not sure which element to use? <a href="http://html5bot.webflow.io/">http://html5bot.webflow.io/</a>
-            </p>
-          </section>
-          <section>
-            <h4>
-              Document Outline
-            </h4>
-            <p>
-              <a href="https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm">https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm</a>
-            </p>
-            <p>
-              <a href="http://html5doctor.com/outlines/">http://html5doctor.com/outlines/</a>
-            </p>
-            <p>
-              <a href="https://bitsofco.de/document-outlines-in-html-5-1/">https://bitsofco.de/document-outlines-in-html-5-1/</a>
-            </p>
-            <p>
-              <a href="https://css-tricks.com/document-outline-dilemma/">https://css-tricks.com/document-outline-dilemma/</a>
-            </p>
-            <p>
-              Check outline
-            </p>
-            <p>
-              <a href="https://gsnedders.html5.org/outliner/">https://gsnedders.html5.org/outliner/</a>
-            </p>
-          </section>
-          <section>
-            <h4>
-              Inline Styles
-            </h4>
-            <p>
-              Avoid inline styles or event handlers
-            </p>
-          </section>
-          <section>
-            <h4>
-              Indentation
-            </h4>
-            <p>
-              Use 2 spaces for indentation. This is the only way to guarantee code renders the same in any environment.
-            </p>
-            <pre>
-<code class="language-markup" id="">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frontend Guidelines</title><meta name="description" content=""><meta name="author" content=""><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100, 300,400,700"><link rel="stylesheet" href="assets/css/prism.css"><style>body{margin:0;font-family:Lato,sans-serif}</style><link rel="stylesheet" href="assets/css/guidelines.css"><script src="assets/js/prefixfree.js" async defer></script><script src="assets/js/prism.js" async defer></script></head><body><main><header><h1>Frontend Guidelines</h1><p>Frontend guidelines to make team members write consistent & cohesive code together.</p></header><section><h2>Html</h2><section><h3 class="has-title-decoration title-decoration_blue">Html Principles</h3><section><h4 class="has-title-decoration title-decoration_purple">Standalone</h4><p>HTML itself should work without CSS and JavaScript. The content should be accessible, form should be able to submited.</p><p>Disable images, CSS and JavaScript to check if it works.</p></section><section><h4 class="has-title-decoration title-decoration_purple">Semantics</h4><p>Use semantics elements (<code class="language-html">article</code>,<code class="language-html">aside</code>,<code class="language-html">figure</code>,<code class="language-html">figcaption</code>,<code class="language-html">header</code>,<code class="language-html">footer</code>,<code class="language-html">main</code>,<code class="language-html">nav</code>,<code class="language-html">section</code>) instead of generic elements (<code class="language-html">div</code>,<code class="language-html">span</code>).</p><p>Not sure which element to use?<a href="http://html5bot.webflow.io/">http://html5bot.webflow.io/</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Document Outline</h4><p><a href="https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm">https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm</a></p><p><a href="http://html5doctor.com/outlines/">http://html5doctor.com/outlines/</a></p><p><a href="https://bitsofco.de/document-outlines-in-html-5-1/">https://bitsofco.de/document-outlines-in-html-5-1/</a></p><p><a href="https://css-tricks.com/document-outline-dilemma/">https://css-tricks.com/document-outline-dilemma/</a></p><p>Check outline</p><p><a href="https://gsnedders.html5.org/outliner/">https://gsnedders.html5.org/outliner/</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Inline Styles</h4><p>Avoid inline styles or event handlers</p></section><section><h4 class="has-title-decoration title-decoration_purple">Indentation</h4><p>Use 2 spaces for indentation. This is the only way to guarantee code renders the same in any environment.</p><pre><code class="language-markup" id="">
 
 
-&lt;ul&gt;
-..&lt;li&gt;Item&lt;/li&gt;
-..&lt;li&gt;Item&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+..<li>Item</li>
+..<li>Item</li>
+</ul>
 
 
-</code>
-</pre>
-          </section>
-          <section>
-            <h4>
-              Attributes
-            </h4>
-            <p>
-              "HTML attributes should come in this order for easier reading:"<br>
-              <code class="language-html">class</code><br>
-              <code class="language-html">id, name</code><br>
-              <code class="language-html">data-*</code><br>
-              <code class="language-html">src, for, type, href, value</code><br>
-              <code class="language-html">title, alt,<br>
-              role, aria-*</code><br>
-            </p>
-            <p>
-              Classes are used most often, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.
-            </p>
-            <pre>
-<code class="language-markup" id="">
+</code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Attribute Order</h4><p>"HTML attributes should come in this order for easier reading:"<br><code class="language-html">class</code><br><code class="language-html">id, name</code><br><code class="language-html">data-*</code><br><code class="language-html">src, for, type, href, value</code><br><code class="language-html">title, alt,<br>role, aria-*</code><br></p><p>Classes are used most often, so they come first. Ids are more specific and should be used sparingly, for in-page bookmarks, so they come second.</p><pre><code class="language-markup" id="">
 
 
-&lt;a class="link" id="link" data-toggle="modal" href="#"&gt;Example link&lt;/a&gt;
+<a class="link" id="link" data-toggle="modal" href="#">Example link</a>
 
 
-</code>
-</pre>
-          </section>
-          <section>
-            <h4>
-              Classes
-            </h4>
-            <p>
-              + Always use lower case.
-            </p>
-            <p>
-              + The classes used for javaScript must start with <code class="language-html">js-</code>.
-            </p>
-            <pre>
-<code class="language-markup" id="">
+</code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Classes</h4><p>+ Always use lower case.</p><p>+ The classes used for javaScript must start with<code class="language-html">js-</code>.</p><pre><code class="language-markup" id="">
 
 
-&lt;a href="" class="js-popup"&gt;Log In&lt;/a&gt;
+<a href="" class="js-popup">Log In</a>
 
 
-</code>
-</pre>
-          </section>
-          <section>
-            <h4>
-              Comments
-            </h4>
-            <p>
-              Don't use HTML comments, because:
-            </p>
-            <p>
-              + HTML comments should be visible only for developer.
-            </p>
-            <p>
-              + HTML comments increase file size.
-            </p>
-            <p>
-              Use comments in backend/templating language:
-            </p>
-            <pre>
-<code class="language-markup" id="">
-
-
-&lt;?php
+</code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Comments</h4><p>Don't use HTML comments, because:</p><p>+ HTML comments should be visible only for developer.</p><p>+ HTML comments increase file size.</p><p>Use comments in backend/templating language:</p><pre><code class="language-markup" id=""> <?php
 // Some comments
-?&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+?> <p>Lorem ipsum dolor sit amet.</p>
 
 
-</code>
-</pre>
-            <pre>
-<code class="language-markup" id="">
+</code></pre><pre><code class="language-markup" id="">
 
 
 {# Some comments #}
-&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+<p>Lorem ipsum dolor sit amet.</p>
 
 
-</code>
-</pre>
-          </section>
-        </section>
-        <section>
-          <h3>
-            Html Tools
-          </h3>
-          <section>
-            <h4>
-              Templating Engine
-            </h4>
-            <p>
-              Nunjucks:
-            </p>
-            <p>
-              <a href="https://mozilla.github.io/nunjucks">https://mozilla.github.io/nunjucks</a>
-            </p>
-            <p>
-              <a href="https://mozilla.github.io/nunjucks/templating.html">https://mozilla.github.io/nunjucks/templating.html</a>
-            </p>
-            <p>
-              <a href="https://mozilla.github.io/nunjucks/api.html">https://mozilla.github.io/nunjucks/api.html</a>
-            </p>
-          </section>
-        </section>
-      </section>
-      <section>
-        <h2>
-          Css
-        </h2>
-        <section>
-          <h3>
-            Css Principles
-          </h3>
-        </section>
-        <section>
-          <h3>
-            Css Methodology
-          </h3>
-          <p>
-            SMACSS: <a href="https://smacss.com/">https://smacss.com/</a>
-          </p>
-          <p>
-            BEM: <a href="https://en.bem.info/method/">https://en.bem.info/method/</a>
-          </p>
-          <p>
-            OOCSS: <a href="http://oocss.org/">http://oocss.org/</a>
-          </p>
-          <p>
-            ITCSS: <a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">https://speakerdeck.com/dafed/managing-css-projects-with-itcss</a>
-          </p>
-        </section>
-        <section>
-          <h3>
-            Css Tools
-          </h3>
-          <section>
-            <h4>
-              Preprocessor
-            </h4>
-            <p>
-              SASS:
-            </p>
-            <p>
-              <a href="http://sass-lang.com">http://sass-lang.com</a>
-            </p>
-            <p>
-              <a href="https://sass-guidelin.es">https://sass-guidelin.es</a>
-            </p>
-          </section>
-          <section>
-            <h4>
-              Css Base
-            </h4>
-            <p>
-              Normalize:
-            </p>
-            <p>
-              <a href="https://necolas.github.io/normalize.css/">https://necolas.github.io/normalize.css/</a>
-            </p>
-            <p>
-              Reset:
-            </p>
-            <p>
-              <a href="https://github.com/ganlanyuan/startpoint/blob/master/src/scss/base/_reset.scss">https://github.com/ganlanyuan/startpoint/blob/master/src/scss/base/_reset.scss</a>
-            </p>
-          </section>
-          <section>
-            <h4>
-              Postprocessors
-            </h4>
-            <p>
-              <a href="https://leaverou.github.io/prefixfree/">https://leaverou.github.io/prefixfree/</a>
-            </p>
-            <p>
-              <a href="https://github.com/postcss/autoprefixer">https://github.com/postcss/autoprefixer</a>
-            </p>
-          </section>
-        </section>
-        <section>
-          <h3>
-            Css Frameworks
-          </h3>
-          <section>
-            <h4>
-              Rocket
-            </h4>
-            <p>
-              <a href="https://ganlanyuan.github.io/rocket/">https://ganlanyuan.github.io/rocket/</a>
-            </p>
-          </section>
-        </section>
-        <section>
-          <h3>
-            Css Styles
-          </h3>
-        </section>
-      </section>
-      <section>
-        <h2>
-          Javascript
-        </h2>
-        <section>
-          <h3>
-            Javascript Principles
-          </h3>
-        </section>
-        <section>
-          <h3>
-            Javascript Tools
-          </h3>
-          <section>
-            <h4>
-              Javascript Framework
-            </h4>
-          </section>
-          <section>
-            <h4>
-              Polyfills
-            </h4>
-            <p>
-              polyfill.io, <a href="https://qa.polyfill.io/v2/docs/">https://qa.polyfill.io/v2/docs/</a>
-            </p>
-          </section>
-          <section>
-            <h4>
-              Dependencies
-            </h4>
-            <p>
-              go-native, <a href="https://github.com/ganlanyuan/go-native">https://github.com/ganlanyuan/go-native</a>
-            </p>
-          </section>
-          <section>
-            <h4>
-              Test
-            </h4>
-            <p>
-              testcafe, <a href="https://devexpress.github.io/testcafe/">https://devexpress.github.io/testcafe/</a>
-            </p>
-          </section>
-        </section>
-        <section>
-          <h3>
-            Javascript Style
-          </h3>
-        </section>
-      </section>
-      <section>
-        <h2>
-          Media
-        </h2>
-        <section>
-          <h3>
-            Icons
-          </h3>
-          <section>
-            <h4>
-              Icon Font
-            </h4>
-            <p>
-              <a href="http://fontawesome.io/">http://fontawesome.io/</a>
-            </p>
-            <p>
-              <a href="http://fontastic.me/">http://fontastic.me/</a>
-            </p>
-          </section>
-          <section>
-            <h4>
-              Svg Sprites
-            </h4>
-            <p>
-              <a href="https://github.com/ganlanyuan/icons">https://github.com/ganlanyuan/icons</a>
-            </p>
-            <p>
-              <a href="https://ganlanyuan.github.io/icons/">https://ganlanyuan.github.io/icons/</a>
-            </p>
-          </section>
-        </section>
-        <section>
-          <h3>
-            Responsive Images
-          </h3>
-          <p>
-            srcset
-          </p>
-        </section>
-        <section>
-          <h3>
-            Optimize Images
-          </h3>
-          <p>
-            <a href="https://addyosmani.com/blog/image-optimization-tools/">https://addyosmani.com/blog/image-optimization-tools/</a>
-          </p>
-        </section>
-      </section>
-      <section>
-        <h2>
-          Performance
-        </h2>
-        <section>
-          <h3>
-            Measuring Project's Speed
-          </h3>
-          <p>
-            <a href="http://tools.pingdom.com/">http://tools.pingdom.com/</a>
-          </p>
-          <p>
-            <a href="https://developers.google.com/speed/pagespeed/">https://developers.google.com/speed/pagespeed/</a>
-          </p>
-        </section>
-        <section>
-          <h3>
-            Decrease File Size
-          </h3>
-          <p>
-            <a href="https://css-tricks.com/snippets/htaccess/active-gzip-compression/">https://css-tricks.com/snippets/htaccess/active-gzip-compression/</a>
-          </p>
-          <p>
-            <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization">https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization</a>
-          </p>
-        </section>
-        <section>
-          <h3>
-            Tools
-          </h3>
-          <p>
-            <a href="http://www.webpagetest.org/">http://www.webpagetest.org/</a>
-          </p>
-          <p>
-            <a href="https://aerotwist.com/blog/bigrig/">https://aerotwist.com/blog/bigrig/</a>
-          </p>
-          <p>
-            <a href="https://speedcurve.com/">https://speedcurve.com/</a>
-          </p>
-        </section>
-      </section>
-      <section>
-        <h2>
-          Accessibility
-        </h2>
-        <section>
-          <h3>
-            Checklist
-          </h3>
-          <p>
-            <a href="http://a11yproject.com/checklist.html">http://a11yproject.com/checklist.html</a>
-          </p>
-        </section>
-        <section>
-          <h3>
-            Tools
-          </h3>
-          <p>
-            <a href="http://a11yproject.com/resources.html">http://a11yproject.com/resources.html</a>
-          </p>
-        </section>
-      </section>
-      <section>
-        <h2>
-          Tooling
-        </h2>
-        <section>
-          <h3>
-            Task Runner
-          </h3>
-          <section>
-            <h4>
-              Gulp
-            </h4>
-            <p>
-              <a href="http://gulpjs.com/">http://gulpjs.com/</a>
-            </p>
-          </section>
-        </section>
-        <section>
-          <h3>
-            Dependency Manager
-          </h3>
-          <section>
-            <h4>
-              Bower
-            </h4>
-            <p>
-              <a href="http://bower.io/">http://bower.io/</a>
-            </p>
-          </section>
-        </section>
-        <section>
-          <h3>
-            Scaffolding Tool
-          </h3>
-          <section>
-            <h4>
-              Yeoman
-            </h4>
-            <p>
-              <a href="http://yeoman.io/">http://yeoman.io/</a>
-            </p>
-          </section>
-        </section>
-        <section>
-          <h3>
-            Reinforce Frontend Style
-          </h3>
-          <section>
-            <h4>
-              Editor Config
-            </h4>
-            <p>
-              <a href="http://editorconfig.org/">http://editorconfig.org/</a>
-            </p>
-          </section>
-          <section>
-            <h4>
-              Linters
-            </h4>
-            <p>
-              <a href="https://github.com/CSSLint/csslint">https://github.com/CSSLint/csslint</a>
-            </p>
-          </section>
-        </section>
-        <section>
-          <h3>
-            Container
-          </h3>
-          <section>
-            <h4>
-              Docker
-            </h4>
-            <p>
-              website <a href="https://www.docker.com/">https://www.docker.com/</a>
-            </p>
-            <p>
-              download <a href="https://store.docker.com/search?offering=community&amp;platform=desktop&amp;q=&amp;type=edition">https://store.docker.com/search?offering=community&amp;platform=desktop&amp;q=&amp;type=edition</a>
-            </p>
-            <p>
-              docker image, <a href="https://hub.docker.com/r/cmcdev/web/">https://hub.docker.com/r/cmcdev/web/</a> <a href="https://github.com/ganlanyuan/dockerfile">https://github.com/ganlanyuan/dockerfile</a>
-            </p>
-          </section>
-        </section>
-      </section>
-      <section>
-        <h2>
-          Version Control
-        </h2>
-        <section>
-          <h3>
-            Git
-          </h3>
-          <p>
-            <a href="https://git-scm.com/">https://git-scm.com/</a>
-          </p>
-          <p>
-            The code is hosted on <a href="https://git.cmcintra.net/">https://git.cmcintra.net/</a>
-          </p>
-        </section>
-      </section>
-      <section>
-        <h2>
-          Support And Optimization
-        </h2>
-      </section>
-      <section>
-        <h2>
-          Localization
-        </h2>
-        <section>
-          <h3>
-            Different Languages
-          </h3>
-        </section>
-      </section>
-      <section>
-        <h2>
-          Further Reading
-        </h2>
-        <p>
-          <a href="http://bradfrost.com/blog/post/frontend-guidelines-exercise/">http://bradfrost.com/blog/post/frontend-guidelines-exercise/</a>
-        </p>
-        <p>
-          <a href="http://www.yellowshoe.com.au/standards">http://www.yellowshoe.com.au/standards</a>
-        </p>
-        <p>
-          <a href="http://codeguide.co/">http://codeguide.co/</a>
-        </p>
-        <p>
-          <a href="http://manuals.gravitydept.com/code">http://manuals.gravitydept.com/code</a>
-        </p>
-        <p>
-          <a href="https://github.com/bendc/frontend-guidelines/blob/master/README.md">https://github.com/bendc/frontend-guidelines/blob/master/README.md</a>
-        </p>
-      </section>
-    </main>
-  </body>
-</html>
+</code></pre></section></section><section><h3 class="has-title-decoration title-decoration_blue">Html Tools</h3><section><h4 class="has-title-decoration title-decoration_purple">Starter Framework</h4><p>Startpoint:<a href="https://github.com/ganlanyuan/startpoint">https://github.com/ganlanyuan/startpoint</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Templating Engine</h4><p>Nunjucks:</p><p><a href="https://mozilla.github.io/nunjucks">https://mozilla.github.io/nunjucks</a></p><p><a href="https://mozilla.github.io/nunjucks/templating.html">https://mozilla.github.io/nunjucks/templating.html</a></p><p><a href="https://mozilla.github.io/nunjucks/api.html">https://mozilla.github.io/nunjucks/api.html</a></p></section></section></section><section><h2>Css</h2><section><h3 class="has-title-decoration title-decoration_blue">Css Principles</h3><section><h4 class="has-title-decoration title-decoration_purple">Syntax</h4><p>Use 2 spaces for indentation</p><p>Keep each selector to a single line when use group selector</p><p>One space after selector</p><p>One space after<code class="language-html">:</code>for each declaration</p><pre><code class="language-scss" id="">
+
+
+// Bad
+.selector{padding-left:20px;}
+
+// Good
+.selector { padding-left: 20px; }
+
+
+</code></pre><p>Each declaration should appear on its own line</p><p>End all declaration with a semi-colon</p><p>Quote attribute values in selector,<code class="language-html">[type="text"]</code></p><p>Avoid specifying units for zero values</p><p>Use meaningful class names and IDs</p><p>Avoid absolute positioning</p><p>Avoid !important</p><p>Don't use breaks<br>just to make space in your layout</p><p>Avoid hacks unless there is no other way to achieve what you want</p></section><section><h4 class="has-title-decoration title-decoration_purple">Declaration Order</h4><p>Related property declaration should be grouped together following the order<br><code class="language-html">Box</code>(display, float, position, left, top, width, height and so on)<br><code class="language-html">Border & Background</code><br><code class="language-html">Text</code>(font-family, font-size, text-transform, letter-spacing and so on)<br><code class="language-html">Other</code><br></p><pre><code class="language-scss" id="">
+
+
+.selector {
+  // Box
+  display: block;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+
+  // Border & Background
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+
+  // Text
+  font: normal 13px "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+
+  /* Other */
+  opacity: 0.8;
+}
+
+
+</code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Media Query Placement</h4><p>Place media queries close to their relevant rule sets. Don't bundle them all in a separate stylesheet or at the end of the document.</p><pre><code class="language-scss" id="">
+
+
+.selector {
+  property: value;
+}
+@media (min-width: 40em) {
+  .selector {
+    property: new-value;
+  }
+}
+
+
+</code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Multi-lines Vs Single-line</h4><p>If a rule set includes only one declaration, put it in a signle line, otherwise, declarations should be split to separate lines.</p><pre><code class="language-scss" id="">
+
+
+// signle line
+.selector { font-size: 14px; }
+
+// separated lines
+.selector2 {
+  position: absolute;
+  left: 0;
+  max-width: 200px;
+}
+
+
+</code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Selectors</h4><p>Use classes over element tag</p><p>Lowercase only</p><p>Hyphen over underscore</p><pre><code class="language-scss" id="">
+
+
+// Bad
+.goToTop {}
+.go_to_top {}
+
+// Good
+.go-to-top {}
+
+
+</code></pre><p>Keep selectors short (less than 3)</p><p>Take out unnecessary selector</p><pre><code class="language-scss" id="">
+
+
+// Bad
+.nav ul li { list-style: none; }
+a[src^="https://"] { color: purple; }
+
+// Good
+.nav li { list-style: none; }
+[src^="https://"] { color: purple; }
+
+
+</code></pre><p>Avoid overriding styles</p><pre><code class="language-scss" id="">
+
+
+// Bad
+.nav li { padding-left: 10px; }
+.nav li:first-child { padding-left: 0; }
+
+// Good
+.nav li + li { padding-left: 10px; }
+
+
+</code></pre></section><section><h4 class="has-title-decoration title-decoration_purple">Further Reading</h4><p><a href="http://cssguidelin.es/">http://cssguidelin.es/</a></p></section></section><section><h3 class="has-title-decoration title-decoration_blue">Css Methodology</h3><p>SMACSS:<a href="https://smacss.com/">https://smacss.com/</a></p><p>BEM:<a href="https://en.bem.info/method/">https://en.bem.info/method/</a></p><p>OOCSS:<a href="http://oocss.org/">http://oocss.org/</a></p><p>ITCSS:<a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">https://speakerdeck.com/dafed/managing-css-projects-with-itcss</a></p></section><section><h3 class="has-title-decoration title-decoration_blue">Css Tools</h3><section><h4 class="has-title-decoration title-decoration_purple">Preprocessor</h4><p>SASS:</p><p><a href="http://sass-lang.com">http://sass-lang.com</a></p><p><a href="https://sass-guidelin.es">https://sass-guidelin.es</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Css Base</h4><p>Normalize:</p><p><a href="https://necolas.github.io/normalize.css/">https://necolas.github.io/normalize.css/</a></p><p>Reset:</p><p><a href="https://github.com/ganlanyuan/startpoint/blob/master/src/scss/base/_reset.scss">https://github.com/ganlanyuan/startpoint/blob/master/src/scss/base/_reset.scss</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Postprocessors</h4><p><a href="https://leaverou.github.io/prefixfree/">https://leaverou.github.io/prefixfree/</a></p><p><a href="https://github.com/postcss/autoprefixer">https://github.com/postcss/autoprefixer</a></p></section></section><section><h3 class="has-title-decoration title-decoration_blue">Css Frameworks</h3><section><h4 class="has-title-decoration title-decoration_purple">Rocket</h4><p><a href="https://ganlanyuan.github.io/rocket/">https://ganlanyuan.github.io/rocket/</a></p></section></section></section><section><h2>Javascript</h2><section><h3 class="has-title-decoration title-decoration_blue">Javascript Principles</h3></section><section><h3 class="has-title-decoration title-decoration_blue">Javascript Tools</h3><section><h4 class="has-title-decoration title-decoration_purple">Javascript Framework</h4></section><section><h4 class="has-title-decoration title-decoration_purple">Polyfills</h4><p>polyfill.io,<a href="https://qa.polyfill.io/v2/docs/">https://qa.polyfill.io/v2/docs/</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Dependencies</h4><p>go-native,<a href="https://github.com/ganlanyuan/go-native">https://github.com/ganlanyuan/go-native</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Test</h4><p>testcafe,<a href="https://devexpress.github.io/testcafe/">https://devexpress.github.io/testcafe/</a></p></section></section><section><h3 class="has-title-decoration title-decoration_blue">Javascript Style</h3></section></section><section><h2>Media</h2><section><h3 class="has-title-decoration title-decoration_blue">Icons</h3><section><h4 class="has-title-decoration title-decoration_purple">Icon Font</h4><p><a href="http://fontawesome.io/">http://fontawesome.io/</a></p><p><a href="http://fontastic.me/">http://fontastic.me/</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Svg Sprites</h4><p><a href="https://github.com/ganlanyuan/icons">https://github.com/ganlanyuan/icons</a></p><p><a href="https://ganlanyuan.github.io/icons/">https://ganlanyuan.github.io/icons/</a></p></section></section><section><h3 class="has-title-decoration title-decoration_blue">Responsive Images</h3><p>srcset</p></section><section><h3 class="has-title-decoration title-decoration_blue">Optimize Images</h3><p><a href="https://addyosmani.com/blog/image-optimization-tools/">https://addyosmani.com/blog/image-optimization-tools/</a></p></section></section><section><h2>Performance</h2><section><h3 class="has-title-decoration title-decoration_blue">Measuring Project's Speed</h3><p><a href="http://tools.pingdom.com/">http://tools.pingdom.com/</a></p><p><a href="https://developers.google.com/speed/pagespeed/">https://developers.google.com/speed/pagespeed/</a></p></section><section><h3 class="has-title-decoration title-decoration_blue">Decrease File Size</h3><p><a href="https://css-tricks.com/snippets/htaccess/active-gzip-compression/">https://css-tricks.com/snippets/htaccess/active-gzip-compression/</a></p><p><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization">https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization</a></p></section><section><h3 class="has-title-decoration title-decoration_blue">Tools</h3><p><a href="http://www.webpagetest.org/">http://www.webpagetest.org/</a></p><p><a href="https://aerotwist.com/blog/bigrig/">https://aerotwist.com/blog/bigrig/</a></p><p><a href="https://speedcurve.com/">https://speedcurve.com/</a></p></section></section><section><h2>Accessibility</h2><section><h3 class="has-title-decoration title-decoration_blue">Checklist</h3><p><a href="http://a11yproject.com/checklist.html">http://a11yproject.com/checklist.html</a></p></section><section><h3 class="has-title-decoration title-decoration_blue">Tools</h3><p><a href="http://a11yproject.com/resources.html">http://a11yproject.com/resources.html</a></p></section></section><section><h2>Tooling</h2><section><h3 class="has-title-decoration title-decoration_blue">Task Runner</h3><section><h4 class="has-title-decoration title-decoration_purple">Gulp</h4><p><a href="http://gulpjs.com/">http://gulpjs.com/</a></p></section></section><section><h3 class="has-title-decoration title-decoration_blue">Dependency Manager</h3><section><h4 class="has-title-decoration title-decoration_purple">Bower</h4><p><a href="http://bower.io/">http://bower.io/</a></p></section></section><section><h3 class="has-title-decoration title-decoration_blue">Scaffolding Tool</h3><section><h4 class="has-title-decoration title-decoration_purple">Yeoman</h4><p><a href="http://yeoman.io/">http://yeoman.io/</a></p></section></section><section><h3 class="has-title-decoration title-decoration_blue">Reinforce Frontend Style</h3><section><h4 class="has-title-decoration title-decoration_purple">Editor Config</h4><p><a href="http://editorconfig.org/">http://editorconfig.org/</a></p></section><section><h4 class="has-title-decoration title-decoration_purple">Linters</h4><p><a href="https://github.com/CSSLint/csslint">https://github.com/CSSLint/csslint</a></p></section></section><section><h3 class="has-title-decoration title-decoration_blue">Container</h3><section><h4 class="has-title-decoration title-decoration_purple">Docker</h4><p>website<a href="https://www.docker.com/">https://www.docker.com/</a></p><p>download<a href="https://store.docker.com/search?offering=community&platform=desktop&q=&type=edition">https://store.docker.com/search?offering=community&platform=desktop&q=&type=edition</a></p><p>docker image,<a href="https://hub.docker.com/r/cmcdev/web/">https://hub.docker.com/r/cmcdev/web/</a><a href="https://github.com/ganlanyuan/dockerfile">https://github.com/ganlanyuan/dockerfile</a></p></section></section></section><section><h2>Version Control</h2><section><h3 class="has-title-decoration title-decoration_blue">Git</h3><p><a href="https://git-scm.com/">https://git-scm.com/</a></p><p>The code is hosted on<a href="https://git.cmcintra.net/">https://git.cmcintra.net/</a></p></section></section><section><h2>Support And Optimization</h2></section><section><h2>Localization</h2><section><h3 class="has-title-decoration title-decoration_blue">Different Languages</h3></section></section><section><h2>Further Reading</h2><p><a href="http://bradfrost.com/blog/post/frontend-guidelines-exercise/">http://bradfrost.com/blog/post/frontend-guidelines-exercise/</a></p><p><a href="http://www.yellowshoe.com.au/standards">http://www.yellowshoe.com.au/standards</a></p><p><a href="http://codeguide.co/">http://codeguide.co/</a></p><p><a href="http://manuals.gravitydept.com/code">http://manuals.gravitydept.com/code</a></p><p><a href="https://github.com/bendc/frontend-guidelines/blob/master/README.md">https://github.com/bendc/frontend-guidelines/blob/master/README.md</a></p></section></main></body></html>

@@ -1,6 +1,103 @@
 {% macro get(blockName) %}
 
-{% if blockName === '' %}
+{% if blockName === 'syntax-space' %}
+// Bad
+.selector{padding-left:20px;}
+
+// Good
+.selector { padding-left: 20px; }
+
+{% elif blockName === 'declaration-order' %}
+.selector {
+  // Box
+  display: block;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+
+  // Border & Background
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+
+  // Text
+  font: normal 13px "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+
+  /* Other */
+  opacity: 0.8;
+}
+
+{% elif blockName === 'media-query-placement' %}
+.selector {
+  property: value;
+}
+@media (min-width: 40em) {
+  .selector {
+    property: new-value;
+  }
+}
+
+{% elif blockName === 'single-declaration' %}
+// signle line
+.selector { font-size: 14px; }
+
+// separated lines
+.selector2 {
+  position: absolute;
+  left: 0;
+  max-width: 200px;
+}
+
+{% elif blockName === 'selectors-unnecessary-selector' %}
+// Bad
+.nav ul li { list-style: none; }
+a[src^="https://"] { color: purple; }
+
+// Good
+.nav li { list-style: none; }
+[src^="https://"] { color: purple; }
+
+{% elif blockName === 'selectors-overriding-styles' %}
+// Bad
+.nav li { padding-left: 10px; }
+.nav li:first-child { padding-left: 0; }
+
+// Good
+.nav li + li { padding-left: 10px; }
+
+{% elif blockName === 'selectors-lowercase-hyphen' %}
+// Bad
+.goToTop {}
+.go_to_top {}
+
+// Good
+.go-to-top {}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
+
+{% elif blockName === '' %}
 
 {% elif blockName === '' %}
 
