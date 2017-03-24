@@ -81,9 +81,33 @@ a[src^="https://"] { color: purple; }
 // Good
 .go-to-top {}
 
-//=> {% elif blockName === '' %}
+//=> {% elif blockName === 'oocss' %}
+// ** Separate structure and skin ** //
+// Structure
+.side-widget {
+  width: 100%;
+  padding: 10px 5px;
+}
+ 
+// Skinning
+.recent-posts {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #2b2b2b;
+  font-size:1.45em;
+}
 
-//=> {% elif blockName === '' %}
+// ** Separate container and content ** //
+// OOCSS
+.sidebar {}
+h2.sidebar-title {}
+ 
+// Non-OOCSS
+.sidebar {}
+.sidebar h2 {}
+
+//=> {% elif blockName === 'load-fonts' %}
+.heading { font-family: Helvetica, Arial, sans-serif; }
+.fonts-loaded .heading { font-family: 'My Custom Font', sans-serif; }
 
 //=> {% elif blockName === '' %}
 

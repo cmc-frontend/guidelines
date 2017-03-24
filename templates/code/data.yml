@@ -117,10 +117,24 @@ guidelines:
       - http://cssguidelin.es/
 
     CSS Methodology: 
-    - 'SMACSS: https://smacss.com/'
-    - 'BEM: https://en.bem.info/method/'
-    - 'OOCSS: http://oocss.org/'
-    - 'ITCSS: https://speakerdeck.com/dafed/managing-css-projects-with-itcss'
+
+      SMACSS: 
+      - https://smacss.com/
+
+      OOCSS: 
+      - http://www.hongkiat.com/blog/basics-of-object-oriented-css/, 
+      - https://github.com/stubbornella/oocss/wiki
+      - Separate structure and skin
+      - Separate container and content
+      - S-oocss
+
+      BEM: 
+      - https://en.bem.info/method/
+      - The idea of BEM (Block, Element, Modifier) is to divide the user interface into independent blocks. This allows reuse of existing code.
+      - M-bem
+
+      ITCSS: 
+      - https://speakerdeck.com/dafed/managing-css-projects-with-itcss
 
     CSS Tools:
 
@@ -141,10 +155,6 @@ guidelines:
 
     CSS Frameworks:
       Rocket: https://ganlanyuan.github.io/rocket/
-
-# - **Spaces or Tabs?**
-# - **Spacing around rules?**
-# - **[Grouping](https://smacss.com/book/formatting#grouping) properties?**
 
   JavaScript:
 
@@ -183,10 +193,27 @@ guidelines:
     optimize images:
       https://addyosmani.com/blog/image-optimization-tools/
 
-  # Fonts:
-    # - **How do you load custom fonts?**
-    # - **Do you use any tools to help implement web fonts** *(such as [Font Squirrel](https://www.fontsquirrel.com/), etc)*?
-    # - **Do you use a service to manage and serve custom fonts** *(such as [Fonts.com](https://www.fonts.com/), [Typekit](https://typekit.com/), etc)*?
+  Fonts:
+
+    Webfont Generator:
+    - https://www.fontsquirrel.com/tools/webfont-generator
+    - https://everythingfonts.com/font-face
+
+    Load fonts:
+      The issues:
+        FOUT, FOIT, FOFT  https://css-tricks.com/fout-foit-foft/
+
+      Solutions:
+      - '<strong>Fontfaceobserver</strong>:'
+      - https://github.com/bramstein/fontfaceobserver
+      - Use `-fontfaceobserver-` to detect if the custom fonts are loaded. If they get loaded, set a boolean flag in the session storage and add a '.fonts-loaded' class to the html element. 
+      - If this page get reloaded or sub pages are opened, the class will be added immediately.
+      - M-load-fonts
+      - S-load-fonts
+
+    Further reading:
+    - https://dev.opera.com/articles/better-font-face/
+    - http://bramstein.com/writing/web-font-loading-patterns.html
 
   Performance:
     # - **Do you use performance budgets?** If so, what [metrics](https://timkadlec.com/2014/11/performance-budget-metrics/) are you using to determine budgets? Where are you keeping track of performance budgets?
@@ -212,6 +239,12 @@ guidelines:
 
   Tooling:
 
+    Container platform:
+      docker: 
+      - website https://www.docker.com/
+      - download https://store.docker.com/search?offering=community&platform=desktop&q=&type=edition
+      - image https://hub.docker.com/r/cmcdev/web/, https://github.com/ganlanyuan/dockerfile
+
     Task runner:
       Gulp: http://gulpjs.com/
 
@@ -224,12 +257,6 @@ guidelines:
     reinforce frontend style:
       Editor Config: http://editorconfig.org/
       linters: https://github.com/CSSLint/csslint
-
-    Container:
-      docker: 
-      - website https://www.docker.com/
-      - download https://store.docker.com/search?offering=community&platform=desktop&q=&type=edition
-      - docker image, https://hub.docker.com/r/cmcdev/web/, https://github.com/ganlanyuan/dockerfile
 
   Version control:
     git: 

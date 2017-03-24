@@ -22,9 +22,63 @@
 {{ "{# Some comments #}" }}
 <p>Lorem ipsum dolor sit amet.</p>
 
-{% elif blockName === '' %}
+{% elif blockName === 'load-fonts' %}
+<!-- Place in <head> -->
+<script>
+  // add class .fonts-loaded if the fonts were downloaded
+  if (sessionStorage.getItem('fontsLoaded')) {
+    document.documentElement.classList.add('fonts-loaded');
+  }
+</script>
 
-{% elif blockName === '' %}
+<!-- Place in <body> -->
+<script>
+  if (!sessionStorage.getItem('fontsLoaded')) {
+    new FontFaceObserver("My Custom Font")
+        .load()
+        .then(function(){
+            sessionStorage.setItem('fontsLoaded', true);
+            document.documentElement.className += " fonts-loaded";
+        }).catch(function () {
+            sessionStorage.setItem('fontsLoaded', false);
+        });
+  }
+</script>
+
+{% elif blockName === 'bem' %}
+<!-- Block: pop -->
+<!-- Element: pop__header -->
+<!-- Modifier: pop_is-green -->
+
+<div class="pop pop_is-green">
+  <header class="pop__header"></header>
+  <main class="pop__main">
+    <form class="pop__form">
+      <input type="email" name="email">
+      <button>Submit</button>
+    </form>
+  </main>
+  <footer class="pop__footer"></footer>
+</div>
+
+<!-- File structure -->
+search-form/                           # Directory of the search-form
+    __input/                           # Subdirectory of the search-form__input
+        search-form__input.css         # CSS implementation of the search-form__input element
+        search-form__input.js          # JavaScript implementation of the search-form__input element
+
+    __button/                          # Subdirectory of the search-form__button element
+        search-form__button.css
+        search-form__button.js
+
+    _theme/                            # Subdirectory of the search-form_theme modifier
+        search-form_theme_islands.css  # CSS implementation of the search-form block
+                                       # that has the theme modifier with the value islands
+        search-form_theme_lite.css     # CSS implementation of the search-form block
+                                       # that has the theme modifier with the value lite
+
+    search-form.css                    # CSS implementation of the search-form block
+    search-form.js                     # JavaScript implementation of the search-form block
 
 {% elif blockName === '' %}
 

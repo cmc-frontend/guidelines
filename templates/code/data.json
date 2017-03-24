@@ -99,12 +99,26 @@
           "http://cssguidelin.es/"
         ]
       },
-      "CSS Methodology": [
-        "SMACSS: https://smacss.com/",
-        "BEM: https://en.bem.info/method/",
-        "OOCSS: http://oocss.org/",
-        "ITCSS: https://speakerdeck.com/dafed/managing-css-projects-with-itcss"
-      ],
+      "CSS Methodology": {
+        "SMACSS": [
+          "https://smacss.com/"
+        ],
+        "OOCSS": [
+          "http://www.hongkiat.com/blog/basics-of-object-oriented-css/,",
+          "https://github.com/stubbornella/oocss/wiki",
+          "Separate structure and skin",
+          "Separate container and content",
+          "S-oocss"
+        ],
+        "BEM": [
+          "https://en.bem.info/method/",
+          "The idea of BEM (Block, Element, Modifier) is to divide the user interface into independent blocks. This allows reuse of existing code.",
+          "M-bem"
+        ],
+        "ITCSS": [
+          "https://speakerdeck.com/dafed/managing-css-projects-with-itcss"
+        ]
+      },
       "CSS Tools": {
         "Preprocessor": [
           "SASS: ",
@@ -150,6 +164,27 @@
       "responsive images": "srcset",
       "optimize images": "https://addyosmani.com/blog/image-optimization-tools/"
     },
+    "Fonts": {
+      "Webfont Generator": [
+        "https://www.fontsquirrel.com/tools/webfont-generator",
+        "https://everythingfonts.com/font-face"
+      ],
+      "Load fonts": {
+        "The issues": "FOUT, FOIT, FOFT  https://css-tricks.com/fout-foit-foft/",
+        "Solutions": [
+          "<strong>Fontfaceobserver</strong>:",
+          "https://github.com/bramstein/fontfaceobserver",
+          "Use `-fontfaceobserver-` to detect if the custom fonts are loaded. If they get loaded, set a boolean flag in the session storage and add a '.fonts-loaded' class to the html element.",
+          "If this page get reloaded or sub pages are opened, the class will be added immediately.",
+          "M-load-fonts",
+          "S-load-fonts"
+        ]
+      },
+      "Further reading": [
+        "https://dev.opera.com/articles/better-font-face/",
+        "http://bramstein.com/writing/web-font-loading-patterns.html"
+      ]
+    },
     "Performance": {
       "measuring project's speed": [
         "http://tools.pingdom.com/",
@@ -170,6 +205,13 @@
       "Tools": "http://a11yproject.com/resources.html"
     },
     "Tooling": {
+      "Container platform": {
+        "docker": [
+          "website https://www.docker.com/",
+          "download https://store.docker.com/search?offering=community&platform=desktop&q=&type=edition",
+          "image https://hub.docker.com/r/cmcdev/web/, https://github.com/ganlanyuan/dockerfile"
+        ]
+      },
       "Task runner": {
         "Gulp": "http://gulpjs.com/"
       },
@@ -182,13 +224,6 @@
       "reinforce frontend style": {
         "Editor Config": "http://editorconfig.org/",
         "linters": "https://github.com/CSSLint/csslint"
-      },
-      "Container": {
-        "docker": [
-          "website https://www.docker.com/",
-          "download https://store.docker.com/search?offering=community&platform=desktop&q=&type=edition",
-          "docker image, https://hub.docker.com/r/cmcdev/web/, https://github.com/ganlanyuan/dockerfile"
-        ]
       }
     },
     "Version control": {
