@@ -80,7 +80,21 @@ search-form/                           # Directory of the search-form
     search-form.css                    # CSS implementation of the search-form block
     search-form.js                     # JavaScript implementation of the search-form block
 
-{% elif blockName === '' %}
+{% elif blockName === 'script-comments' %}
+<script>
+  /**
+   * Description of the function.
+   *
+   * @param {array}   colors       - Array of colors.
+   * @param {boolean} hasPotOfGold - Default: true.
+   * @param {object}  data         - API response.
+   * @param {string}  insertType   - [append|replace] Method to update the markup.
+   */
+  function rainbow (colors, hasPotOfGold, data, insertType) {
+    // Something
+  }
+</script>
+
 
 {% elif blockName === '' %}
 

@@ -161,6 +161,9 @@ guidelines:
   JavaScript:
 
     JavaScript Principles:
+      comments:
+      - Use http://usejsdoc.org/ for function comments.
+      - M-script-comments
 
     JavaScript tools:
 
@@ -176,6 +179,10 @@ guidelines:
         testcafe, https://devexpress.github.io/testcafe/
 
     JavaScript Style :
+    further reading:
+    - https://github.com/bendc/frontend-guidelines/blob/master/README.md#javascript
+    - http://www.yellowshoe.com.au/standards/#js
+    - https://github.com/airbnb/javascript
 
   Media:
 

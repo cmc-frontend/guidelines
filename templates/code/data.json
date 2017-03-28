@@ -143,14 +143,24 @@
       }
     },
     "JavaScript": {
-      "JavaScript Principles": null,
+      "JavaScript Principles": {
+        "comments": [
+          "Use http://usejsdoc.org/ for function comments.",
+          "M-script-comments"
+        ]
+      },
       "JavaScript tools": {
         "JavaScript framework": null,
         "Polyfills": "polyfill.io, https://qa.polyfill.io/v2/docs/",
         "Dependencies": "go-native, https://github.com/ganlanyuan/go-native",
         "Test": "testcafe, https://devexpress.github.io/testcafe/"
       },
-      "JavaScript Style": null
+      "JavaScript Style": null,
+      "further reading": [
+        "https://github.com/bendc/frontend-guidelines/blob/master/README.md#javascript",
+        "http://www.yellowshoe.com.au/standards/#js",
+        "https://github.com/airbnb/javascript"
+      ]
     },
     "Media": {
       "Icons": {
